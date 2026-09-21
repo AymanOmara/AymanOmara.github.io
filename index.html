@@ -7,232 +7,160 @@
 <meta name="description" content="Ayman Omara — Senior Mobile Engineer. Flutter, native Android (Kotlin, Compose), native iOS (Swift) and .NET backends. 15+ apps shipped for GovTech, FinTech and startups.">
 <meta property="og:title" content="Ayman Omara — Senior Mobile Engineer">
 <meta property="og:description" content="Flutter · Android · iOS · .NET — 15+ apps shipped for GovTech, FinTech and startups.">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/75618602?v=4">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
 <meta property="og:type" content="website">
-<link rel="icon" href="https://avatars.githubusercontent.com/u/75618602?s=64&v=4">
+<meta property="og:url" content="https://aymanomara.github.io/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ayman Omara — Senior Mobile Engineer. Flutter, Kotlin, Swift and .NET.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ayman Omara — Senior Mobile Engineer">
+<meta name="twitter:description" content="Arabic-first government and fintech apps. Flutter, Kotlin, Swift and .NET. 15+ apps shipped.">
+<meta name="twitter:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<link rel="canonical" href="https://aymanomara.github.io/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ayman Omara", "url": "https://aymanomara.github.io/", "jobTitle": "Senior Mobile Engineer", "email": "mailto:aymanomara55@gmail.com", "sameAs": ["https://github.com/AymanOmara", "https://www.linkedin.com/in/ayman-omara"], "knowsAbout": ["Flutter", "Kotlin", "Jetpack Compose", "Swift", "ASP.NET Core", "Mobile application security", "Arabic localization", "Clean Architecture"]}</script>
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0b0d12; --bg-2:#11141b; --card:#141821; --line:#232937;
-  --text:#e8ebf2; --muted:#9aa3b5; --dim:#6b7488;
-  --accent:#5b8cff; --accent-2:#22d3a6; --accent-soft:rgba(91,140,255,.12);
-  --shadow:0 10px 40px rgba(0,0,0,.35);
-  --radius:16px; --max:1120px;
-}
-:root[data-theme="light"]{
-  --bg:#f7f8fb; --bg-2:#eef1f6; --card:#ffffff; --line:#e1e5ee;
-  --text:#121622; --muted:#4c5566; --dim:#7a8396;
-  --accent:#2f5fe8; --accent-2:#0e9f7a; --accent-soft:rgba(47,95,232,.08);
-  --shadow:0 10px 30px rgba(20,30,60,.08);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
-a{color:inherit;text-decoration:none}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-section{padding:96px 0;scroll-margin-top:64px}
-.eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
-h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
-.lead{color:var(--muted);max-width:640px;font-size:17px}
-
-/* nav */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:18px;letter-spacing:-.02em}
-.logo span{color:var(--accent)}
-.links{display:flex;gap:28px;align-items:center}
-.links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
-.links a:hover{color:var(--text)}
-.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer}
-.menu-btn{display:none}
-
-/* hero */
-.hero{padding:120px 0 96px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:-40% -20% auto auto;width:720px;height:720px;background:radial-gradient(circle,var(--accent-soft),transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center;position:relative}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--card);margin-bottom:28px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent-2) 25%,transparent);animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 8px transparent}}
-h1{font-size:clamp(40px,6.4vw,72px);line-height:1.05;font-weight:800;letter-spacing:-.035em;margin-bottom:20px}
-h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.typed{font-family:"JetBrains Mono",monospace;font-size:18px;color:var(--muted);margin-bottom:28px;min-height:28px}
-.typed::after{content:"▍";color:var(--accent);animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid var(--line)}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 35%,transparent)}
-.btn.ghost{background:var(--card)}
-.avatar-card{justify-self:center;position:relative}
-.avatar-card img{width:300px;height:300px;border-radius:28px;object-fit:cover;border:1px solid var(--line);box-shadow:var(--shadow)}
-.float{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center;white-space:nowrap}
-.float b{font-size:16px}
-.f1{top:18px;left:-60px}.f2{bottom:40px;right:-50px}.f3{bottom:-18px;left:-20px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:72px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.stat b{display:block;font-size:32px;font-weight:800;letter-spacing:-.02em}
-.stat span{color:var(--muted);font-size:14px}
-
-/* about */
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:32px}
-.about-grid p{color:var(--muted);margin-bottom:16px;font-size:16.5px}
-.about-grid p strong{color:var(--text)}
-.pill-list{display:grid;gap:12px}
-.pill{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.pill .ico{font-size:22px;line-height:1}
-.pill h4{font-size:15px;margin-bottom:2px}
-.pill p{font-size:14px;color:var(--muted);margin:0}
-
-/* experience */
-.timeline{margin-top:40px;position:relative}
-.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.job{position:relative;padding-left:40px;margin-bottom:28px}
-.job::before{content:"";position:absolute;left:0;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
-.job-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:border-color .2s}
-.job-card:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
-.job-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:12px}
-.job h3{font-size:19px}
-.job .co{color:var(--accent);font-weight:600}
-.job .meta{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--dim);text-align:right}
-.job ul{list-style:none;display:grid;gap:8px}
-.job li{color:var(--muted);font-size:15px;padding-left:18px;position:relative}
-.job li::before{content:"▹";position:absolute;left:0;color:var(--accent-2)}
-.job li strong{color:var(--text);font-weight:600}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.tag{font-family:"JetBrains Mono",monospace;font-size:12px;padding:4px 10px;border-radius:8px;background:var(--accent-soft);color:var(--accent)}
-
-/* projects */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 28px}
-.filter{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font:500 14px Inter,sans-serif;cursor:pointer;transition:.2s}
-.filter.active,.filter:hover{color:#fff;background:var(--accent);border-color:var(--accent)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
-.proj:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 50%,var(--line));box-shadow:var(--shadow)}
-.proj.hide{display:none}
-.proj-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.proj-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:var(--accent-soft)}
-.proj-links{display:flex;gap:10px}
-.proj-links a{color:var(--dim);font-size:13px;font-weight:500;transition:color .2s}
-.proj-links a:hover{color:var(--accent)}
-.proj h3{font-size:19px;margin-bottom:4px}
-.proj .kind{font-size:13px;color:var(--accent-2);font-weight:600;margin-bottom:10px}
-.proj p{color:var(--muted);font-size:14.5px;flex:1}
-.proj .tags{margin-top:18px}
-
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin-top:40px}
-.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.skill h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.skill .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:13px;padding:5px 11px;border-radius:8px;border:1px solid var(--line);color:var(--muted);background:var(--bg-2)}
-
-/* github */
-.gh-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.langbar{display:flex;height:10px;border-radius:99px;overflow:hidden;margin:32px 0 12px;background:var(--line)}
-.langbar span{height:100%}
-.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.repo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s}
-.repo:hover{border-color:var(--accent)}
-.repo h4{font-family:"JetBrains Mono",monospace;font-size:14px;color:var(--accent)}
-.repo p{font-size:13.5px;color:var(--muted);flex:1}
-.repo .rmeta{font-size:12px;color:var(--dim);display:flex;gap:14px}
-.repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-
-/* contact */
-.contact-box{background:linear-gradient(135deg,var(--accent-soft),transparent),var(--card);border:1px solid var(--line);border-radius:24px;padding:56px;text-align:center}
-.contact-box .lead{margin:0 auto 32px}
-.socials{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--dim);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}*{animation:none!important;transition:none!important}}
-
-@media (max-width:900px){
-  .hero-grid,.about-grid{grid-template-columns:1fr}
-  .avatar-card{order:-1}
-  .avatar-card img{width:200px;height:200px}
-  .float{display:none}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:20px;gap:18px}
-  .links.open{display:flex}
-  .menu-btn{display:grid}
-  .contact-box{padding:36px 22px}
-  .job .meta{text-align:left}
-}
-@media (max-width:420px){.wrap{padding:0 16px}.grid,.repos{grid-template-columns:1fr}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
+<a class="skip-link" href="#projects">Skip to work</a>
+<nav aria-label="Main navigation">
   <div class="wrap">
-    <a href="#top" class="logo">ayman<span>.</span>omara</a>
-    <div style="display:flex;gap:10px;align-items:center">
+    <a href="#top" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
       <div class="links" id="links">
+        <a href="#projects">Work</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#github">GitHub</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-contact">Let's talk <span>↗</span></a>
       </div>
-      <button class="icon-btn" id="theme" aria-label="Toggle theme">◐</button>
-      <button class="icon-btn menu-btn" id="menu" aria-label="Menu">☰</button>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
     </div>
   </div>
 </nav>
-
+<main>
 <header class="hero" id="top">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="badge"><span class="dot"></span> Open to senior mobile roles · Cairo / Remote</div>
-        <h1>Hi, I'm Ayman.<br><span class="grad">I ship mobile apps</span><br>end to end.</h1>
-        <div class="typed" id="typed"></div>
-        <p class="lead" style="margin-bottom:32px">Senior Mobile Engineer building production apps in <strong>Flutter</strong>, native <strong>Android</strong> and <strong>iOS</strong>, plus the <strong>.NET</strong> backends behind them. 15+ apps shipped for GovTech, FinTech and startups, including apps for Saudi government bodies.</p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">View my work →</a>
-          <a class="btn ghost" href="mailto:aymanomara55@gmail.com">Get in touch</a>
-        </div>
-      </div>
-      <div class="avatar-card">
-        <img src="https://avatars.githubusercontent.com/u/75618602?s=600&v=4" alt="Ayman Omara">
-        <div class="float f1">📱 <span><b>15+</b> apps shipped</span></div>
-        <div class="float f2">🏛️ <span>GovTech · KSA</span></div>
-        <div class="float f3 mono">✓ 90% test coverage</div>
-      </div>
-    </div>
-    <div class="stats reveal">
-      <div class="stat"><b data-count="5">0</b><span>years in industry</span></div>
-      <div class="stat"><b data-count="15" data-suffix="+">0</b><span>apps shipped</span></div>
-      <div class="stat"><b data-count="60">0</b><span>public repositories</span></div>
-      <div class="stat"><b data-count="5000" data-suffix="+">0</b><span>LinkedIn followers</span></div>
-    </div>
+  <div class="universe" id="universe">
+    <div class="nebula" aria-hidden="true"></div>
+    <canvas id="starfield" tabindex="0" role="img" aria-label="An interactive constellation. Drag horizontally or use the arrow keys to rotate.">An abstract constellation of points orbiting a luminous center.</canvas>
+    <h1 class="hero-name"><span>Ayman</span><span>Omara</span></h1>
+    <p class="hero-kicker">MOBILE ENGINEER &amp; PRODUCT MAKER</p>
+    <div class="hero-baseline"><span>Cairo, Egypt · Working everywhere</span><a href="#introduction">Discover my universe <span>↓</span></a><button id="motion" aria-label="Pause constellation animation" aria-pressed="false" hidden>Ⅱ</button></div>
   </div>
 </header>
+<section class="introduction" id="introduction">
+  <div class="reading-width reveal">
+    <div class="eyebrow">SENIOR MOBILE ENGINEER · CAIRO, EGYPT</div>
+    <h2>I build Arabic-first apps<br>for government and fintech.</h2>
+    <p>I’m Ayman. Over 5+ years, I’ve shipped 15+ apps across Flutter, native Android, and iOS, with hands-on .NET backend development.</p>
+    <p>I’ve built apps for Saudi government entities, led delivery of a secure investment platform, and rebuilt an HR app across 17 modules. My focus is maintainable architecture, Arabic and English experiences, and taking complex requirements through testing to release.</p>
+    <div class="intro-actions"><a class="btn primary" href="#projects">Explore my work <span>↗</span></a><a class="btn ghost" href="assets/Ayman-Omara-CV.pdf" download>Download CV <span>↓</span></a></div>
+  </div>
+  <div class="stats wrap">
+    <div class="stat"><b>5<span>+ years</span></b><span>Building digital products</span></div><div class="stat"><b>15<span>+</span></b><span>Production apps shipped</span></div><div class="stat"><b>5</b><span>Saudi government apps</span></div><div class="stat"><b>17</b><span>Modules in the Madar HR rewrite</span></div>
+  </div>
+</section>
+<section id="projects">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">01 / SELECTED WORK</div>
+      <h2>Government, fintech, and products I’ve built.</h2>
+      <p class="lead">Government apps, full-stack products and side projects. Client work is under NDA, so those cards describe the work without linking source code.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="filter active" data-f="all">All</button>
+      <button class="filter" data-f="gov">GovTech</button>
+      <button class="filter" data-f="flutter">Flutter</button>
+      <button class="filter" data-f="native">Native iOS / Android</button>
+      <button class="filter" data-f="fullstack">Full-stack</button>
+    </div>
+    <div class="grid" id="grid">
+      <article class="proj reveal featured featured-gov" data-cat="gov flutter fullstack" id="project-nca">
+        <div class="project-art gov-art" aria-hidden="true"><span class="project-art-label">ENGINEERING WITHIN STRICT CONSTRAINTS.</span><div class="gov-symbol"><i></i><i></i><i></i><i></i><i></i></div><span class="project-art-bottom">NCA <b>FLUTTER / .NET</b></span></div>
+        <div class="proj-top"><div class="proj-ico">01 /</div></div>
+        <h3>National Cybersecurity Authority (NCA)</h3><div class="kind">Saudi Arabia · Government application · Flutter</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>Strict security constraints, with the production backend still in development.</dd></div><div><dt>My contribution</dt><dd>Built the Flutter app and a .NET mock API for request and response testing.</dd></div><div><dt>Outcome</dt><dd>The team could validate API interactions before the real backend was ready.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">.NET</span><span class="tag">Security constraints</span><span class="tag">API testing</span></div>
+      </article>
+      <article class="proj reveal featured featured-hr" data-cat="flutter" id="project-felousy">
+        <div class="project-art hr-art" aria-hidden="true"><span class="project-art-label">SECURE INVESTING. END-TO-END DELIVERY.</span><div class="hr-symbol"><i></i><i></i><i></i><i></i></div><span class="project-art-bottom">Felousy <b>FINTECH / FLUTTER</b></span></div>
+        <div class="proj-top"><div class="proj-ico">02 /</div></div>
+        <h3>Felousy</h3><div class="kind">Smart investment platform · iOS &amp; Android</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>A secure mobile journey for discovering funds, investing, and tracking portfolios.</dd></div><div><dt>My contribution</dt><dd>Led the Flutter delivery, modular architecture, authentication, wallet, SSL pinning, biometrics, and CI/CD.</dd></div><div><dt>Outcome</dt><dd>Delivered a production iOS/Android app with hardened builds, crash reporting, and transactional notifications.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC / Cubit</span><span class="tag">Clean Architecture</span><span class="tag">Mobile security</span><span class="tag">CI/CD</span><span class="tag">Firebase</span></div>
+      </article>
+
+      <article class="proj reveal" data-cat="gov native" id="project-ncgr">
+        <div class="proj-top"><div class="proj-ico">03 /</div></div>
+        <h3>NCGR, Ministry of Finance</h3><div class="kind">Saudi GovTech · Android</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>A maintainable Android application for the National Center for Government Resources Systems (NCGR), Saudi Ministry of Finance.</dd></div><div><dt>My contribution</dt><dd>Built the app with Jetpack Compose, Flows, Paging 3, Hilt, and Clean Architecture.</dd></div><div><dt>Outcome</dt><dd>Reached 90% unit-test coverage with MockK.</dd></div></dl>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Hilt</span><span class="tag">MockK</span></div>
+      </article>
+      <article class="proj reveal" data-cat="gov flutter" id="project-madar">
+        <div class="proj-top"><div class="proj-ico">04 /</div></div>
+        <h3>Madar HR Self-Service</h3><div class="kind">Enterprise HR · Flutter rewrite</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>A legacy HR codebase that was no longer maintainable.</dd></div><div><dt>My contribution</dt><dd>Rebuilt it in Flutter with separate common, domain, data, and di packages, BLoC/Cubit, and Retrofit.</dd></div><div><dt>Outcome</dt><dd>Brought the rewrite to approximately 90% completion across 17 modules, with Arabic and English support.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Retrofit</span><span class="tag">get_it</span></div>
+      </article>
+      <article class="proj reveal" data-cat="gov native" id="project-government">
+        <div class="proj-top"><div class="proj-ico">05 /</div></div>
+        <h3>Ministry of Tourism · DGA · BOE</h3><div class="kind">Saudi GovTech · Android</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>Mobile applications for the Ministry of Tourism, Digital Government Authority (DGA), and BOE’s Saudi regulations service.</dd></div><div><dt>My contribution</dt><dd>Developed native Android apps, including a Jetpack Compose interface for the Ministry of Tourism.</dd></div><div><dt>Outcome</dt><dd>Delivered the three Android applications as part of my work at Sure Global Technology.</dd></div></dl>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span></div>
+      </article>
+      <article class="proj reveal" data-cat="flutter fullstack" id="project-rahtk">
+        <div class="proj-top"><div class="proj-ico">06 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener">App ↗</a><a href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener">API ↗</a></div></div>
+        <h3>Rahtk</h3><div class="kind">Full-stack e-commerce</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>An e-commerce product spanning mobile shopping, payments, and purchase reminders.</dd></div><div><dt>My contribution</dt><dd>Built the Flutter client and .NET 8 API with EF Core, Hangfire, and Firebase.</dd></div><div><dt>Outcome</dt><dd>Connected product browsing, addresses, payment options, scheduled reminders, and push notifications.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">.NET 8</span><span class="tag">EF Core</span><span class="tag">Firebase</span></div>
+      </article>
+      <article class="proj reveal" data-cat="flutter fullstack" id="project-ibnsina">
+        <div class="proj-top"><div class="proj-ico">07 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/ibn_sina_flutter" target="_blank" rel="noopener">App ↗</a><a href="https://github.com/AymanOmara/sina_dashboard" target="_blank" rel="noopener">Dashboard ↗</a><a href="https://github.com/AymanOmara/sina_back_end_dotnet" target="_blank" rel="noopener">API ↗</a></div></div>
+        <h3>Ibn Sina</h3><div class="kind">Mobile + dashboard + API</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>A product needing both a customer mobile app and an administration interface.</dd></div><div><dt>My contribution</dt><dd>Built the Flutter mobile app, Flutter desktop dashboard, and ASP.NET Core API.</dd></div><div><dt>Outcome</dt><dd>Delivered the three connected parts of the product.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Flutter Desktop</span><span class="tag">ASP.NET Core</span></div>
+      </article>
+      <article class="proj reveal" data-cat="native" id="project-clipy">
+        <div class="proj-top"><div class="proj-ico">08 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener">Code ↗</a></div></div>
+        <h3>Clipy</h3><div class="kind">macOS · Swift / SwiftUI</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>Faster access to clipboard history without sending copied content to a server.</dd></div><div><dt>My contribution</dt><dd>Built a native macOS utility in Swift, SwiftUI, and AppKit.</dd></div><div><dt>Outcome</dt><dd>Delivered offline history, instant search, a global shortcut, trackpad gestures, and quick paste.</dd></div></dl>
+        <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">AppKit</span></div>
+      </article>
+
+      <article class="proj reveal" data-cat="flutter" id="project-hojozat">
+        <div class="proj-top"><div class="proj-ico">09 /</div></div>
+        <h3>Hojozat</h3><div class="kind">Reservations · Kuwait</div>
+        <dl class="project-story"><div><dt>Challenge</dt><dd>Owners and clients needed to manage reservations and assets in one app.</dd></div><div><dt>My contribution</dt><dd>Developed and maintained the Flutter app for Deals in Kuwait.</dd></div><div><dt>Outcome</dt><dd>Shipped fixes and improvements across the booking flow and asset management.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span></div>
+      </article>
+
+
+
+    </div>
+  </div>
+</section>
 
 <section id="about">
   <div class="wrap reveal">
-    <div class="eyebrow">01 · About</div>
-    <h2>From Figma to App Store, API included.</h2>
+    <div class="eyebrow">02 / ABOUT ME</div>
+    <h2>From native iOS to full product delivery.</h2>
     <div class="about-grid">
       <div>
+        <img class="about-photo" src="https://avatars.githubusercontent.com/u/75618602?s=240&amp;v=4" alt="Ayman Omara" width="112" height="112" loading="lazy">
         <p>I'm a <strong>Senior Mobile Engineer</strong> based in Cairo, Egypt. I started out in native iOS with Swift, then moved into Android and Flutter, and learned <strong>ASP.NET Core</strong> so I could build the APIs and admin dashboards my apps depend on.</p>
         <p>My focus is <strong>architecture that stays maintainable</strong>: modular Clean Architecture with separate <code class="mono">common</code>, <code class="mono">domain</code>, <code class="mono">data</code> and <code class="mono">di</code> packages, BLoC/Cubit state management, typed networking and high unit-test coverage.</p>
-        <p>I've delivered apps for the <strong>Saudi Ministry of Finance, Ministry of Tourism and Digital Government Authority</strong>, rebuilt a 17-module HR platform from scratch, and shipped products for startups in Egypt, Kuwait and the Gulf. All of them are Arabic and English, RTL-first.</p>
+        <p>I've delivered apps for the <strong>Saudi Ministry of Finance, Ministry of Tourism and Digital Government Authority</strong>, led a Flutter rewrite covering 17 HR modules, and shipped products for startups in Egypt, Kuwait and the Gulf. Arabic and English localization, with right-to-left layouts, is a core part of my mobile work.</p>
       </div>
       <div class="pill-list">
-        <div class="pill"><span class="ico">🧱</span><div><h4>Clean Architecture</h4><p>Layered, testable code that's still easy to change two years later.</p></div></div>
-        <div class="pill"><span class="ico">🌍</span><div><h4>RTL &amp; localization</h4><p>Arabic and English apps built RTL from the start.</p></div></div>
-        <div class="pill"><span class="ico">🔁</span><div><h4>Full product ownership</h4><p>Design handoff → mobile → API → dashboard → store release.</p></div></div>
-        <div class="pill"><span class="ico">🧪</span><div><h4>Quality</h4><p>Unit tests with MockK and bloc_test, coverage tracking, code review.</p></div></div>
+        <div class="pill"><span class="ico">01</span><div><h4>Clean Architecture</h4><p>Layered, testable code that's still easy to change two years later.</p></div></div>
+        <div class="pill"><span class="ico">02</span><div><h4>RTL &amp; localization</h4><p>Arabic and English apps built RTL from the start.</p></div></div>
+        <div class="pill"><span class="ico">03</span><div><h4>Full product ownership</h4><p>Design handoff → mobile → API → dashboard → store release.</p></div></div>
+        <div class="pill"><span class="ico">04</span><div><h4>Quality</h4><p>Unit tests with MockK and bloc_test, coverage tracking, code review.</p></div></div>
       </div>
     </div>
   </div>
@@ -241,11 +169,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <section id="experience" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">02 · Experience</div>
-      <h2>Where I've worked</h2>
-      <p class="lead">5 years across product companies, agencies and freelance work.</p>
+      <div class="eyebrow">03 / THE JOURNEY</div>
+      <h2>Teams I’ve built with.</h2>
+      <p class="lead">5+ years across product companies, agencies, and freelance work. Part-time and independent work are labeled below.</p>
     </div>
     <div class="timeline">
+      <div class="job reveal"><div class="job-card"><div class="job-head"><div><h3>Flutter Developer</h3><div class="co">Riadiat</div></div><div class="meta">Sep 2026 – Present</div></div><div class="tags"><span class="tag">Flutter</span><span class="tag">Current role</span></div></div></div>
+
       <div class="job reveal"><div class="job-card">
         <div class="job-head"><div><h3>Senior Mobile Developer</h3><div class="co">2P Perfect Presentation</div></div><div class="meta">Apr 2026 – Jun 2026<br>Giza, Egypt · On-site</div></div>
         <ul>
@@ -259,7 +189,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="job reveal"><div class="job-card">
         <div class="job-head"><div><h3>Senior Mobile Developer</h3><div class="co">Sure Global Technology</div></div><div class="meta">Oct 2023 – Apr 2026<br>Cairo, Egypt · On-site</div></div>
         <ul>
-          <li>Rebuilt the <strong>Madar HR self-service app</strong> from scratch in Flutter after judging the legacy code unmaintainable. Took it to ~90% on modular Clean Architecture across <strong>17 modules</strong>: attendance, leaves, overtime, missions, transfers, training, root detection and more.</li>
+          <li>Rebuilt the <strong>Madar HR self-service app</strong> from scratch in Flutter after judging the legacy code unmaintainable. Brought the rewrite to approximately 90% completion using modular Clean Architecture across <strong>17 modules</strong>: attendance, leaves, overtime, missions, transfers, training, root detection and more.</li>
           <li>Built the <strong>NCGR Android app for the Saudi Ministry of Finance</strong> with Jetpack Compose, Flows, Paging 3 and Hilt, reaching <strong>90% unit-test coverage</strong> with MockK.</li>
           <li>Developed the <strong>Ministry of Tourism</strong> app in Jetpack Compose, and delivered the <strong>Digital Government Authority (DGA)</strong> and <strong>BOE</strong> Android apps.</li>
           <li>Built the <strong>NCA</strong> app in Flutter, plus a .NET mock API that let the team test every request and response before the real backend was ready.</li>
@@ -267,8 +197,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Jetpack Compose</span><span class="tag">Hilt</span><span class="tag">Paging 3</span><span class="tag">MockK</span><span class="tag">.NET</span></div>
       </div></div>
 
+
+      <div class="job reveal"><div class="job-card"><div class="job-head"><div><h3>Senior Flutter Developer</h3><div class="co">PFI · Felousy</div></div><div class="meta">Oct 2024<br>Remote · Part-time</div></div><ul><li>Led delivery of the investment app across authentication, funds, orders, wallet, and notifications using modular Dart packages and BLoC/Cubit.</li><li>Implemented SSL pinning, biometrics, root detection, secure storage, and token-based authentication.</li><li>Set up CI/CD pipelines, dev/prod flavors, and hardened releases distributed through Firebase App Distribution.</li></ul><div class="tags"><span class="tag">Flutter</span><span class="tag">Security</span><span class="tag">CI/CD</span><span class="tag">Part-time</span></div></div></div>
       <div class="job reveal"><div class="job-card">
-        <div class="job-head"><div><h3>Mobile &amp; Software Developer</h3><div class="co">Freelance</div></div><div class="meta">Dec 2023 – Present<br>Remote</div></div>
+        <div class="job-head"><div><h3>Mobile &amp; Software Developer</h3><div class="co">Freelance</div></div><div class="meta">Apr 2024 – Present<br>Remote · Independent work alongside employed roles</div></div>
         <ul>
           <li>Build and maintain Flutter apps for Android and iOS for clients across the region.</li>
           <li>Build <strong>.NET</strong> backends and integrate them with the mobile apps.</li>
@@ -278,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div></div>
 
       <div class="job reveal"><div class="job-card">
-        <div class="job-head"><div><h3>Mobile Application Developer</h3><div class="co">Deals</div></div><div class="meta">Apr 2023 – Feb 2024<br>Kuwait · Remote · Part-time</div></div>
+        <div class="job-head"><div><h3>Mobile Application Developer</h3><div class="co">Deals</div></div><div class="meta">Apr 2023 – Mar 2024<br>Kuwait · Remote · Part-time</div></div>
         <ul>
           <li>Developed and maintained <strong>Hojozat</strong>, a Flutter reservation app that owners and clients use to manage bookings and assets.</li>
           <li>Kept the booking flow reliable, shipping fixes and improvements across reservation and asset management.</li>
@@ -296,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div></div>
 
       <div class="job reveal"><div class="job-card">
-        <div class="job-head"><div><h3>Software Engineer</h3><div class="co">Arab Resource Group</div></div><div class="meta">Aug 2021 – Jul 2023<br>Cairo, Egypt · On-site</div></div>
+        <div class="job-head"><div><h3>Software Engineer</h3><div class="co">Arab Resource Group</div></div><div class="meta">Aug 2021 – Aug 2023<br>Cairo, Egypt · On-site</div></div>
         <ul>
           <li>Designed, built and published iOS and Android apps, and supported the Android developers on the team.</li>
           <li>Built a <strong>Flutter desktop POS</strong> app for the company.</li>
@@ -313,104 +245,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section id="projects">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow">03 · Projects</div>
-      <h2>Selected work</h2>
-      <p class="lead">Government apps, full-stack products and side projects. Client work is under NDA, so those cards describe the work without linking source code.</p>
-    </div>
-    <div class="filters reveal" id="filters">
-      <button class="filter active" data-f="all">All</button>
-      <button class="filter" data-f="gov">GovTech</button>
-      <button class="filter" data-f="flutter">Flutter</button>
-      <button class="filter" data-f="native">Native iOS / Android</button>
-      <button class="filter" data-f="fullstack">Full-stack</button>
-    </div>
-    <div class="grid" id="grid">
-      <article class="proj reveal" data-cat="gov native">
-        <div class="proj-top"><div class="proj-ico">🏛️</div></div>
-        <h3>NCGR, Ministry of Finance</h3><div class="kind">Saudi GovTech · Android</div>
-        <p>Android app for the National Center for Government Resources Systems. Jetpack Compose, Flows, Paging 3 and Hilt on Clean Architecture, with 90% unit-test coverage.</p>
-        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Hilt</span><span class="tag">MockK</span></div>
-      </article>
-      <article class="proj reveal" data-cat="gov flutter">
-        <div class="proj-top"><div class="proj-ico">👥</div></div>
-        <h3>Madar HR Self-Service</h3><div class="kind">Enterprise HR · Flutter rewrite</div>
-        <p>Rebuilt from scratch on a modular Clean Architecture (common / domain / data / di). 17 modules including attendance, leaves, overtime, missions, training and certificates. Arabic and English, RTL-first.</p>
-        <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Retrofit</span><span class="tag">get_it</span></div>
-      </article>
-      <article class="proj reveal" data-cat="gov native">
-        <div class="proj-top"><div class="proj-ico">🕌</div></div>
-        <h3>Ministry of Tourism · DGA · BOE</h3><div class="kind">Saudi GovTech · Android</div>
-        <p>Native Android apps for the Saudi Ministry of Tourism, the Digital Government Authority and BOE (Saudi regulations), built with a modern Jetpack Compose UI.</p>
-        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span></div>
-      </article>
-      <article class="proj reveal" data-cat="flutter fullstack">
-        <div class="proj-top"><div class="proj-ico">🛒</div><div class="proj-links"><a href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener">App ↗</a><a href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener">API ↗</a></div></div>
-        <h3>Rahtk</h3><div class="kind">Full-stack e-commerce</div>
-        <p>Products, categories, shipping addresses, payment options, scheduled purchase reminders with Hangfire, and Firebase push notifications. Flutter client with a .NET 8 Clean Architecture API.</p>
-        <div class="tags"><span class="tag">Flutter</span><span class="tag">.NET 8</span><span class="tag">EF Core</span><span class="tag">Firebase</span></div>
-      </article>
-      <article class="proj reveal" data-cat="flutter fullstack">
-        <div class="proj-top"><div class="proj-ico">🩺</div><div class="proj-links"><a href="https://github.com/AymanOmara/ibn_sina_flutter" target="_blank" rel="noopener">App ↗</a><a href="https://github.com/AymanOmara/sina_dashboard" target="_blank" rel="noopener">Dashboard ↗</a><a href="https://github.com/AymanOmara/sina_back_end_dotnet" target="_blank" rel="noopener">API ↗</a></div></div>
-        <h3>Ibn Sina</h3><div class="kind">Mobile + dashboard + API</div>
-        <p>A complete product: a Flutter mobile app, a Flutter desktop admin dashboard and the ASP.NET Core API behind both.</p>
-        <div class="tags"><span class="tag">Flutter</span><span class="tag">Flutter Desktop</span><span class="tag">ASP.NET Core</span></div>
-      </article>
-      <article class="proj reveal" data-cat="native">
-        <div class="proj-top"><div class="proj-ico">📎</div><div class="proj-links"><a href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener">Code ↗</a></div></div>
-        <h3>Clipy</h3><div class="kind">macOS · Swift / SwiftUI</div>
-        <p>Native macOS clipboard manager with a card-based slide-up panel, trackpad gestures, a global hotkey (⌘⇧V), instant search, 1–9 quick paste and auto-paste. Fully offline.</p>
-        <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">AppKit</span></div>
-      </article>
-      <article class="proj reveal" data-cat="flutter">
-        <div class="proj-top"><div class="proj-ico">📡</div></div>
-        <h3>perfect_logger</h3><div class="kind">Flutter library</div>
-        <p>A Flutter package on top of Dio and SignalR that centralizes production observability and streams errors in real time.</p>
-        <div class="tags"><span class="tag">Dart</span><span class="tag">Dio</span><span class="tag">SignalR</span></div>
-      </article>
-      <article class="proj reveal" data-cat="flutter">
-        <div class="proj-top"><div class="proj-ico">🗓️</div></div>
-        <h3>Hojozat</h3><div class="kind">Reservations · Kuwait</div>
-        <p>A booking and asset-management app for owners and their clients, built and maintained in Flutter.</p>
-        <div class="tags"><span class="tag">Flutter</span></div>
-      </article>
-      <article class="proj reveal" data-cat="native">
-        <div class="proj-top"><div class="proj-ico">🍲</div><div class="proj-links"><a href="https://github.com/AymanOmara/FeedMe" target="_blank" rel="noopener">Code ↗</a></div></div>
-        <h3>FeedMe</h3><div class="kind">iOS · Swift</div>
-        <p>A recipe app to browse categories, search meals, watch how-to videos and save favourites offline with Core Data. MVVM with RxSwift, plus unit tests.</p>
-        <div class="tags"><span class="tag">Swift</span><span class="tag">RxSwift</span><span class="tag">Core Data</span></div>
-      </article>
-      <article class="proj reveal" data-cat="flutter">
-        <div class="proj-top"><div class="proj-ico">📊</div><div class="proj-links"><a href="https://github.com/AymanOmara/commerce_metrics" target="_blank" rel="noopener">Code ↗</a></div></div>
-        <h3>Commerce Metrics</h3><div class="kind">Flutter · FinTech-style UI</div>
-        <p>An orders insights app with KPI metrics and time-series charts. Runs on Android, iOS and the web, with unit-test coverage.</p>
-        <div class="tags"><span class="tag">Flutter</span><span class="tag">Charts</span></div>
-      </article>
-      <article class="proj reveal" data-cat="fullstack">
-        <div class="proj-top"><div class="proj-ico">📝</div><div class="proj-links"><a href="https://github.com/AymanOmara/ExaminationSystem" target="_blank" rel="noopener">Code ↗</a></div></div>
-        <h3>Examination System</h3><div class="kind">C# · .NET</div>
-        <p>An exam management system in C#/.NET, part of my ongoing .NET work alongside a payment-system task and OOP coursework.</p>
-        <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section id="skills" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">04 · Skills</div>
-      <h2>My toolbox</h2>
+      <div class="eyebrow">04 / TOOLS OF THE TRADE</div>
+      <h2>Skills I use in production.</h2>
     </div>
     <div class="skills">
-      <div class="skill reveal"><h3>💙 Flutter / Dart</h3><div class="chips"><span class="chip">BLoC / Cubit</span><span class="chip">get_it</span><span class="chip">Dio</span><span class="chip">Retrofit</span><span class="chip">Firebase</span><span class="chip">Flutter Desktop</span><span class="chip">Flutter Web</span><span class="chip">bloc_test</span></div></div>
-      <div class="skill reveal"><h3>🤖 Android</h3><div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Hilt</span><span class="chip">Coroutines / Flow</span><span class="chip">Paging 3</span><span class="chip">MVVM</span><span class="chip">MockK</span></div></div>
-      <div class="skill reveal"><h3>🍎 iOS / macOS</h3><div class="chips"><span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">UIKit</span><span class="chip">RxSwift</span><span class="chip">Core Data</span><span class="chip">Alamofire</span><span class="chip">Objective-C</span></div></div>
-      <div class="skill reveal"><h3>🖥️ Backend</h3><div class="chips"><span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">EF Core</span><span class="chip">SQL Server</span><span class="chip">SignalR</span><span class="chip">Hangfire</span><span class="chip">Azure</span></div></div>
-      <div class="skill reveal"><h3>🧱 Architecture</h3><div class="chips"><span class="chip">Clean Architecture</span><span class="chip">SOLID</span><span class="chip">Modular packages</span><span class="chip">Unit testing</span><span class="chip">RTL / i18n</span></div></div>
-      <div class="skill reveal"><h3>🌐 Web &amp; tools</h3><div class="chips"><span class="chip">TypeScript</span><span class="chip">Angular</span><span class="chip">React</span><span class="chip">HTML / CSS / JS</span><span class="chip">Git</span><span class="chip">Figma</span><span class="chip">App Store / Play</span></div></div>
+      <div class="skill reveal"><h3>Flutter / Dart</h3><div class="chips"><span class="chip">BLoC / Cubit</span><span class="chip">get_it</span><span class="chip">Dio</span><span class="chip">Retrofit</span><span class="chip">Firebase</span><span class="chip">Flutter Desktop</span><span class="chip">Flutter Web</span><span class="chip">bloc_test</span></div><a class="skill-proof" href="#project-madar">17-module architecture in Madar ↗</a></div>
+      <div class="skill reveal"><h3>Android</h3><div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Hilt</span><span class="chip">Coroutines / Flow</span><span class="chip">Paging 3</span><span class="chip">MVVM</span><span class="chip">MockK</span></div><a class="skill-proof" href="#project-ncgr">90% test coverage on NCGR ↗</a></div>
+      <div class="skill reveal"><h3>iOS / macOS</h3><div class="chips"><span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">UIKit</span><span class="chip">RxSwift</span><span class="chip">Core Data</span><span class="chip">Alamofire</span><span class="chip">Objective-C</span></div><a class="skill-proof" href="#project-clipy">Native SwiftUI work in Clipy ↗</a></div>
+      <div class="skill reveal"><h3>Backend</h3><div class="chips"><span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">EF Core</span><span class="chip">SQL Server</span><span class="chip">SignalR</span><span class="chip">Hangfire</span><span class="chip">Azure</span></div><a class="skill-proof" href="#project-rahtk">Flutter + .NET in Rahtk ↗</a></div>
+      <div class="skill reveal"><h3>Architecture</h3><div class="chips"><span class="chip">Clean Architecture</span><span class="chip">SOLID</span><span class="chip">Modular packages</span><span class="chip">Unit testing</span><span class="chip">RTL / i18n</span></div><a class="skill-proof" href="#project-felousy">Modular packages in Felousy ↗</a></div>
+      <div class="skill reveal"><h3>Security &amp; delivery</h3><div class="chips"><span class="chip">SSL pinning</span><span class="chip">Biometrics</span><span class="chip">Secure storage</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins / Azure</span><span class="chip">Firebase App Distribution</span></div><a class="skill-proof" href="#project-felousy">Security and release delivery in Felousy ↗</a></div>
     </div>
   </div>
 </section>
@@ -419,89 +266,44 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="gh-head reveal">
       <div>
-        <div class="eyebrow">05 · Open source</div>
-        <h2>Live from GitHub</h2>
-        <p class="lead">Loaded from the GitHub API when the page opens, so this section is always current.</p>
+        <div class="eyebrow">05 / BUILDING IN THE OPEN</div>
+        <h2>Explore the code.</h2>
+        <p class="lead">A curated selection of my mobile, desktop, and backend repositories. Each one shows a different part of how I build.</p>
       </div>
       <a class="btn ghost" href="https://github.com/AymanOmara" target="_blank" rel="noopener">@AymanOmara ↗</a>
     </div>
-    <div class="langbar" id="langbar"></div>
-    <div class="legend" id="legend"></div>
-    <div class="repos" id="repos"><p class="lead">Loading repositories…</p></div>
+    <div class="repos" id="repos"><a class="repo" href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener"><h4>clipy ↗</h4><p>Offline macOS clipboard manager with history, search, keyboard shortcuts, and quick paste.</p><div class="rmeta">Swift · SwiftUI · AppKit</div></a><a class="repo" href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener"><h4>rahtk-mobile ↗</h4><p>E-commerce mobile client with products, addresses, payment options, and notifications.</p><div class="rmeta">Flutter · Dart</div></a><a class="repo" href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener"><h4>rahtk ↗</h4><p>The Rahtk backend: Clean Architecture, scheduled purchase reminders, and Firebase integration.</p><div class="rmeta">.NET 8 · EF Core</div></a><a class="repo" href="https://github.com/AymanOmara/ibn_sina_flutter" target="_blank" rel="noopener"><h4>ibn_sina_flutter ↗</h4><p>The mobile application in the Ibn Sina product, connected to its ASP.NET Core API.</p><div class="rmeta">Flutter · Dart</div></a><a class="repo" href="https://github.com/AymanOmara/sina_dashboard" target="_blank" rel="noopener"><h4>sina_dashboard ↗</h4><p>The administration dashboard built for the Ibn Sina product.</p><div class="rmeta">Flutter Desktop</div></a><a class="repo" href="https://github.com/AymanOmara/sina_back_end_dotnet" target="_blank" rel="noopener"><h4>sina_back_end_dotnet ↗</h4><p>The shared backend serving the Ibn Sina mobile app and desktop dashboard.</p><div class="rmeta">ASP.NET Core · C#</div></a></div>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
     <div class="contact-box reveal">
-      <div class="eyebrow">06 · Contact</div>
-      <h2>Let's build something.</h2>
-      <p class="lead">I'm open to senior mobile roles and freelance projects in Flutter, Android, iOS or a full product with a .NET backend.</p>
+      <div class="eyebrow">HAVE SOMETHING IN MIND?</div>
+      <h2>What will we build next?</h2>
+      <p class="lead">Open to senior or lead mobile roles and freelance projects in Flutter, Android, iOS, or a full product with a .NET backend.</p>
+      <p class="contact-location">Based in Cairo, Egypt · <span id="cairo-time">Africa/Cairo time zone</span></p>
       <div class="socials">
         <a class="btn primary" href="mailto:aymanomara55@gmail.com">✉ aymanomara55@gmail.com</a>
+        <button class="btn ghost" id="copy-email" hidden>Copy email</button>
+        <a class="btn ghost" href="assets/Ayman-Omara-CV.pdf" download>Download CV ↓</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/ayman-omara" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="btn ghost" href="https://github.com/AymanOmara" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
+      <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> Ayman Omara · Cairo, Egypt</span>
-    <span class="mono">Built with plain HTML/CSS/JS · Hosted on GitHub Pages</span>
+    <span class="mono">Flutter · Kotlin · Swift · .NET</span>
   </div>
 </footer>
 
-<script>
-// theme
-const root=document.documentElement;
-try{const s=localStorage.getItem('theme');if(s)root.dataset.theme=s;else if(matchMedia('(prefers-color-scheme: light)').matches)root.dataset.theme='light'}catch(e){}
-document.getElementById('theme').onclick=()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}};
-// mobile menu
-const links=document.getElementById('links');
-document.getElementById('menu').onclick=()=>links.classList.toggle('open');
-links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
-document.getElementById('yr').textContent=new Date().getFullYear();
-
-// typing
-const roles=['Flutter Developer','Android Engineer · Kotlin & Compose','iOS Engineer · Swift & SwiftUI','.NET Backend Developer','Clean Architecture enthusiast'];
-const typed=document.getElementById('typed');let ri=0,ci=0,del=false;
-(function tick(){const w=roles[ri];typed.textContent=w.slice(0,ci);
-  if(!del&&ci<w.length){ci++;setTimeout(tick,60)}
-  else if(!del){del=true;setTimeout(tick,1600)}
-  else if(ci>0){ci--;setTimeout(tick,30)}
-  else{del=false;ri=(ri+1)%roles.length;setTimeout(tick,300)}})();
-
-// reveal + counters
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
-  e.target.querySelectorAll('[data-count]').forEach(el=>{const t=+el.dataset.count,suf=el.dataset.suffix||'';let st=null;
-    const step=ts=>{st??=ts;const p=Math.min((ts-st)/1200,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString()+suf;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)});
-  io.unobserve(e.target)}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// project filter
-document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('.filter');if(!b)return;
-  document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));
-  const f=b.dataset.f;document.querySelectorAll('.proj').forEach(p=>p.classList.toggle('hide',f!=='all'&&!p.dataset.cat.split(' ').includes(f)))});
-
-// GitHub live
-const COLORS={'C#':'#178600',Dart:'#00B4AB',Swift:'#F05138',Kotlin:'#A97BFF','C++':'#f34b7d',HTML:'#e34c26',JavaScript:'#f1e05a',TypeScript:'#3178c6','Objective-C':'#438eff'};
-const FALLBACK=[{name:'clipy',description:'Modern macOS clipboard manager in Swift & SwiftUI',language:'Swift',stargazers_count:1},{name:'rahtk-mobile',description:'Rahtk e-commerce Flutter app',language:'Dart',stargazers_count:4},{name:'rahtk',description:'Rahtk .NET 8 Clean Architecture backend',language:'C#',stargazers_count:0},{name:'FeedMe',description:'iOS recipe app — MVVM, RxSwift, Core Data',language:'Swift',stargazers_count:2},{name:'commerce_metrics',description:'Orders insights app in Flutter',language:'Dart',stargazers_count:0},{name:'ExaminationSystem',description:'Examination system in C#',language:'C#',stargazers_count:0}];
-function render(repos){
-  const own=repos.filter(r=>!r.fork&&r.name!=='AymanOmara');
-  const counts={};own.forEach(r=>{if(r.language)counts[r.language]=(counts[r.language]||0)+1});
-  const total=Object.values(counts).reduce((a,b)=>a+b,0)||1;
-  const langs=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
-  document.getElementById('langbar').innerHTML=langs.map(([l,c])=>`<span style="width:${c/total*100}%;background:${COLORS[l]||'#888'}" title="${l}"></span>`).join('');
-  document.getElementById('legend').innerHTML=langs.map(([l,c])=>`<span><i style="background:${COLORS[l]||'#888'}"></i>${l} <b>${Math.round(c/total*100)}%</b></span>`).join('');
-  const top=own.sort((a,b)=>(b.stargazers_count-a.stargazers_count)||(new Date(b.pushed_at||0)-new Date(a.pushed_at||0))).slice(0,9);
-  const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  document.getElementById('repos').innerHTML=top.map(r=>`<a class="repo" href="https://github.com/AymanOmara/${esc(r.name)}" target="_blank" rel="noopener">
-    <h4>${esc(r.name)}</h4><p>${esc(r.description)||'—'}</p>
-    <div class="rmeta"><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${COLORS[r.language]||'#888'};margin-right:5px"></i>${esc(r.language)||'—'}</span><span>★ ${r.stargazers_count}</span></div></a>`).join('');
-}
-fetch('https://api.github.com/users/AymanOmara/repos?per_page=100&sort=pushed').then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>render(FALLBACK));
-</script>
+<script src="script.js" defer></script>
+<script src="universe.js" defer></script>
 </body>
 </html>
