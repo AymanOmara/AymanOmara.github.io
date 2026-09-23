@@ -18,6 +18,8 @@ Open http://localhost:8000. No dependencies or build step required.
 - `styles.css`: design system, artwork, animation, and responsive layouts.
 - `script.js`: mobile navigation, project filters, evidence links, scroll reveals, copy email, and Cairo local time.
 - `assets/`: downloadable CV, local SVG favicon, and a 1200×630 social preview image.
+- `ar/index.html`: the Arabic, right-to-left version of the page. Keep it in step with `index.html` when content changes.
+- `work/`: case studies for NCA, Felousy and Madar, with illustrative phone mockups built in HTML/CSS.
 - `universe.js`: lightweight Canvas 2D particle sculpture with drag and arrow-key rotation, a pause control, and rendering suspended when offscreen or the browser tab is hidden.
 
 Reduced-motion preferences are respected, including changes while the page is open. The sculpture starts paused when reduced motion is enabled, and the extended pinned scroll sequence is disabled. Content remains readable with JavaScript disabled. Fonts and the portrait use external resources; system fonts provide a fallback.

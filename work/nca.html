@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>National Cybersecurity Authority (NCA) — Ayman Omara</title>
+<meta name="description" content="How a .NET 8 mock API let an eight-person team build and test an Arabic-first government employee app before its backend was ready.">
+<meta property="og:title" content="National Cybersecurity Authority (NCA) — case study by Ayman Omara">
+<meta property="og:description" content="How a .NET 8 mock API let an eight-person team build and test an Arabic-first government employee app before its backend was ready.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/nca.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-nca"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · SAUDI GOVTECH · FLUTTER · .NET 8</div>
+    <h1>Shipping an Arabic-first government app before its backend existed.</h1>
+    <p class="lead">An employee app for the National Cybersecurity Authority of Saudi Arabia: attendance, leaves, visits and service requests. The production backend was still in development while the app was being built.</p>
+    <div class="case-facts"><div><b>8</b><span>Engineers on the team</span></div><div><b>~45%</b><span>Of 550+ commits, top contributor</span></div><div><b>33</b><span>Production endpoints mirrored</span></div><div><b>Azure AD</b><span>Microsoft sign-in</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#087cc6"><div class="case-screens" aria-hidden="true"><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">صباح الخير، سارة</div><div class="ph-clock"><b>08:42</b><small>الأحد ١٤ ربيع الأول</small></div><div class="ph-cta">تسجيل الحضور</div><div class="ph-row"><i></i>طلب إجازة</div><div class="ph-row"><i></i>زيارة ميدانية</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">طلب إجازة</div><div class="ph-field">النوع<b>سنوية</b></div><div class="ph-field">من<b>٢٢ سبتمبر</b></div><div class="ph-field">إلى<b>٢٦ سبتمبر</b></div><div class="ph-field">الرصيد<b>١٨ يومًا</b></div><div class="ph-cta">إرسال الطلب</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">كتالوج الخدمات</div><div class="ph-grid"><div class="ph-tile"><i></i>شهادة راتب</div><div class="ph-tile"><i></i>تصريح زيارة</div><div class="ph-tile"><i></i>دعم تقني</div><div class="ph-tile"><i></i>طلب عهدة</div></div><div class="ph-row"><i></i>طلباتي</div></div></div></div><figcaption>Illustrative mockups with invented data. The real client UI is under NDA.</figcaption></figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The problem</h2><div><p>The app had to cover attendance, leave, visit and service-request flows in Arabic first, with English alongside. Sign-in went through <strong>Microsoft Azure AD</strong>. The production backend was being built at the same time, so the mobile team had no real API to build against.</p></div></div>
+    <div class="case-body"><h2>What I did</h2><div><ul><li>Top contributor on an eight-person team, with about <strong>45% of 550+ commits</strong>.</li><li>Built features with <strong>Cubit</strong> for state and <strong>Retrofit</strong> for typed networking, plus Azure AD sign-in.</li><li>Built a <strong>.NET 8 mock API</strong> that mirrors <strong>33 production endpoints</strong>, so the team could build and test real flows before the backend was ready.</li></ul></div></div>
+    <div class="case-body"><h2>How the mock unblocked the team</h2><div><div class="layers"><div class="layer"><code>Flutter app</code><span>Cubit per feature, Retrofit clients, Azure AD sign-in</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>Same contract</code><span>The 33 endpoints the production backend will expose</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>.NET 8 mock</code><span>Stand-in API used for development and testing until production was ready</span></div></div></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>The team built and tested the attendance, leave, visit and service flows <strong>before the real backend was ready</strong>, instead of waiting on it.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="felousy.html">Next: Felousy <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>

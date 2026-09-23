@@ -69,7 +69,8 @@
     cancelAnimationFrame(frame);frame=0;previous=0;
     motionButton.hidden=false;
     motionButton.textContent=paused?'▷':'Ⅱ';
-    motionButton.setAttribute('aria-label',paused?'Play constellation animation':'Pause constellation animation');
+    const ar=document.documentElement.lang==='ar';
+    motionButton.setAttribute('aria-label',paused?(ar?'تشغيل حركة المجرّة':'Play constellation animation'):(ar?'إيقاف حركة المجرّة':'Pause constellation animation'));
     motionButton.setAttribute('aria-pressed',String(paused));
     draw();
     if(!paused && visible && !document.hidden) frame=requestAnimationFrame(tick);

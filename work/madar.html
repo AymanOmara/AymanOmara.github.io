@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madar HR Self-Service — Ayman Omara</title>
+<meta name="description" content="Rewriting an unmaintainable HR app from scratch in Flutter: 17 modules, 100+ screens, 157 endpoints, Arabic and English with RTL.">
+<meta property="og:title" content="Madar HR Self-Service — case study by Ayman Omara">
+<meta property="og:description" content="Rewriting an unmaintainable HR app from scratch in Flutter: 17 modules, 100+ screens, 157 endpoints, Arabic and English with RTL.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/madar.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-madar"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · ENTERPRISE HR · FLUTTER REWRITE</div>
+    <h1>Rewriting an HR app that could no longer be maintained.</h1>
+    <p class="lead">Madar is an enterprise HR self-service app. The legacy codebase had become unmaintainable, so I rebuilt it from scratch in Flutter as primary developer, on a modular Clean Architecture.</p>
+    <div class="case-facts"><div><b>17</b><span>Modules</span></div><div><b>100+</b><span>Screens</span></div><div><b>157</b><span>API endpoints</span></div><div><b>~85%</b><span>Of 400+ commits</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#0a8a8a"><div class="case-screens" aria-hidden="true"><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">مرحبًا، أحمد</div><div class="ph-title">الخدمات</div><div class="ph-grid"><div class="ph-tile"><i></i>الحضور</div><div class="ph-tile"><i></i>الإجازات</div><div class="ph-tile"><i></i>العمل الإضافي</div><div class="ph-tile"><i></i>المهام الرسمية</div></div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">رصيد الإجازات</div><div class="ph-field">سنوية<b>١٨ / ٣٠</b></div><div class="ph-bar" style="--w:60%"><i></i></div><div class="ph-field">مرضية<b>٤ / ١٠</b></div><div class="ph-bar" style="--w:40%"><i></i></div><div class="ph-cta">طلب إجازة جديدة</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">سجل الحضور</div><div class="ph-row"><i></i>الأحد<em>08:02</em></div><div class="ph-row"><i></i>الاثنين<em>07:58</em></div><div class="ph-row"><i></i>الثلاثاء<em>08:11</em></div><div class="ph-row"><i></i>الأربعاء<em>08:00</em></div></div></div></div><figcaption>Illustrative mockups with invented data. The real client UI is under NDA.</figcaption></figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The problem</h2><div><p>The legacy HR codebase was no longer maintainable. Patching it would have kept the problems, so the decision was to <strong>rebuild from scratch</strong>.</p></div></div>
+    <div class="case-body"><h2>What I did</h2><div><ul><li>Led the rewrite as primary developer, with about <strong>85% of 400+ commits</strong>.</li><li>Designed and built <strong>17 modules</strong>: attendance, leaves, overtime, business missions, transfers, training, certificates and more. That is 100+ screens, 157 API endpoints and about 80K lines of code.</li><li>Arabic and English with <strong>RTL</strong> from the start, biometric login and root detection.</li></ul></div></div>
+    <div class="case-body"><h2>Architecture</h2><div><div class="layers"><div class="layer"><code>lib</code><span>Screens and one Cubit per screen</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>di</code><span>get_it registration that wires the layers together</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>data</code><span>Retrofit clients, models and repository implementations</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>domain</code><span>Entities and repository contracts</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>common</code><span>Shared types and utilities used by every layer</span></div></div></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>A maintainable replacement for the legacy app: <strong>17 modules</strong> on separate <strong>common, domain, data and di</strong> packages, in Arabic and English.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="nca.html">Next: NCA <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
