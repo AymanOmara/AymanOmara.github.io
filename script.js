@@ -17,7 +17,7 @@ if ('IntersectionObserver' in window && !reducedMotion) {
   document.documentElement.classList.add('motion-ready');
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}
-  }),{threshold:0.06});
+  }),{threshold:0,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 }
 
@@ -42,10 +42,11 @@ if('IntersectionObserver' in window && !reducedMotion){
     const start=performance.now(),duration=1100;
     const step=now=>{
       const t=Math.min((now-start)/duration,1),eased=1-Math.pow(1-t,3);
-      counters.forEach(c=>{c.node.textContent=String(Math.round(c.target*eased))});
+      // Start near the final value so a quick scroll never shows "0 years".
+      counters.forEach(c=>{c.node.textContent=String(Math.round(c.target*(.6+.4*eased)))});
       if(t<1)requestAnimationFrame(step);
     };
-    counters.forEach(c=>{c.node.textContent='0'});
+    counters.forEach(c=>{c.node.textContent=String(Math.round(c.target*.6))});
     requestAnimationFrame(step);
   },{threshold:.5});
   const stats=document.querySelector('.stats');
