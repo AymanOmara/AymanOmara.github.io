@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibn Sina — Ayman Omara</title>
+<meta name="description" content="Ibn Sina: a rejected Xamarin app rebuilt in Flutter, with a Flutter admin dashboard and an ASP.NET Core API for a dental-supplies shop.">
+<meta property="og:title" content="Ibn Sina — case study by Ayman Omara">
+<meta property="og:description" content="Ibn Sina: a rejected Xamarin app rebuilt in Flutter, with a Flutter admin dashboard and an ASP.NET Core API for a dental-supplies shop.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/ibn-sina.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-ibnsina"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · LEGACY REWRITE · FLUTTER + ASP.NET CORE</div>
+    <h1>Replacing a rejected app, from the API to the admin dashboard.</h1>
+    <p class="lead">Ibn Sina sells dental supplies to students and clinics. Its Xamarin app kept getting rejected from the store, even after I fixed its bugs. I rebuilt the customer app in Flutter, built a Flutter web dashboard for the shop, and started the ASP.NET Core API that both use.</p>
+    <div class="case-facts"><div><b>31</b><span>API endpoints</span></div><div><b>21</b><span>Of them written by me</span></div><div><b>24/24</b><span>Customer app commits</span></div><div><b>16/17</b><span>Dashboard commits</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="case-body" style="margin-bottom:34px"><h2>The API, in Swagger</h2><div><p>One ASP.NET Core API serves both the customer app and the admin dashboard. I started it: the project, the database-first EF Core model and the first controllers. A teammate and I then built it out together. Endpoints I wrote are marked.</p></div></div>
+    <div class="api-shots"><figure style="margin:0"><div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>localhost:5029/swagger/index.html</span></div><div class="sw"><div class="sw-head"><div><div class="sw-title">DentalShopWebApi <small>1.0</small><small class="oas">OAS 3.0</small></div><span class="sw-sub">/swagger/v1/swagger.json</span></div></div><div class="sw-tag">MainInfo</div><div class="op get"><b>GET</b><code>/api/MainInfo/GetMainInfo</code></div><div class="op post"><b>POST</b><code>/api/MainInfo/AddMainInfo</code></div><div class="op put"><b>PUT</b><code>/api/MainInfo/UpdateMainInfo</code></div><div class="op del"><b>DELETE</b><code>/api/MainInfo/DeleteMainInfo/{id}</code></div><div class="sw-tag">Notifications</div><div class="op get"><b>GET</b><code>/api/Notifications/GetNotifications/{userId}</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Notifications/InsertNotification</code><em class="me" title="Written by me">mine</em></div><div class="op put"><b>PUT</b><code>/api/Notifications/MarkAsRead/{id}</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Notifications/RegisterFCMToken</code><em class="me" title="Written by me">mine</em></div><div class="sw-tag">Order</div><div class="op get"><b>GET</b><code>/api/Order/GetAllOrders</code></div><div class="op post"><b>POST</b><code>/api/Order/MakeOrder</code><em class="me" title="Written by me">mine</em></div><div class="op put"><b>PUT</b><code>/api/Order/EditOrder/{id}</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Order/GetOrders/{userId}</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Order/GetOrderProducts/{orderId}</code><em class="me" title="Written by me">mine</em></div><div class="sw-tag">OrderProductList</div><div class="op get"><b>GET</b><code>/api/OrderProductList/GetOrderProducts/{orderId}</code><em class="me" title="Written by me">mine</em></div><div class="sw-tag">Panner</div><div class="op get"><b>GET</b><code>/api/Panner/GetPanner</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Panner/AddPanner</code><em class="me" title="Written by me">mine</em></div><div class="op put"><b>PUT</b><code>/api/Panner/UpdatePanner/{id}</code></div><div class="op del"><b>DELETE</b><code>/api/Panner/DeletePanner/{id}</code></div><div class="sw-tag">Product</div><div class="op get"><b>GET</b><code>/api/Product</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Product/GetProduct/{category}</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Product/AddProduct</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Product/AddFavorite</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/Product/DeleteFavorite</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Product/GetAllFavorites</code><em class="me" title="Written by me">mine</em></div><div class="op put"><b>PUT</b><code>/api/Product/UpdateProduct/{id}</code></div><div class="op del"><b>DELETE</b><code>/api/Product/DeleteProduct/{id}</code></div><div class="sw-tag">User</div><div class="op get"><b>GET</b><code>/api/User/GetAllUsers</code></div><div class="op post"><b>POST</b><code>/api/User/CreateAccount</code><em class="me" title="Written by me">mine</em></div><div class="op put"><b>PUT</b><code>/api/User/UpdateAccountInfo/{id}</code><em class="me" title="Written by me">mine</em></div><div class="op post"><b>POST</b><code>/api/User/Login</code><em class="me" title="Written by me">mine</em></div><div class="op del"><b>DELETE</b><code>/api/User/DeleteAccount/{id}</code><em class="me" title="Written by me">mine</em></div><div class="sw-legend"><span><i></i>Written by me (21 of 31)</span><span>No mark: written by my teammate</span></div></div></div><figcaption>All 31 endpoints across 7 controllers, as Swagger lists them.</figcaption></figure><figure style="margin:0"><div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>localhost:5029/swagger/index.html#/Order</span></div><div class="sw"><div class="sw-tag">Order</div><div class="op get"><b>GET</b><code>/api/Order/GetAllOrders</code></div><div class="op-open"><div class="op post"><b>POST</b><code>/api/Order/MakeOrder</code><em class="me" title="Written by me">mine</em></div><div class="op-body"><div class="op-sec">Parameters <span>Try it out</span></div><p style="margin:0;font-size:12px;color:#6b7280">No parameters</p><div class="op-sec">Request body <span>application/json</span></div><pre>{
+  <span class="k">"userId"</span>: <span class="n">58</span>,
+  <span class="k">"orderStatus"</span>: <span class="s">"Pending"</span>,
+  <span class="k">"orderPrice"</span>: <span class="n">1450</span>,
+  <span class="k">"orderLocation"</span>: <span class="s">"<bdi dir="rtl" class="ar">مدينة نصر، القاهرة</bdi>"</span>,
+  <span class="k">"orderPhone"</span>: <span class="s">"01xxxxxxxxx"</span>,
+  <span class="k">"paymentMethod"</span>: <span class="s">"Cash"</span>,
+  <span class="k">"deliveryFees"</span>: <span class="n">50</span>,
+  <span class="k">"orderGovernorate"</span>: <span class="s">"<bdi dir="rtl" class="ar">القاهرة</bdi>"</span>,
+  <span class="k">"orderProducts"</span>: [
+    { <span class="k">"prouductId"</span>: <span class="n">14</span>, <span class="k">"price"</span>: <span class="n">900</span>, <span class="k">"amount"</span>: <span class="n">1</span> },
+    { <span class="k">"prouductId"</span>: <span class="n">22</span>, <span class="k">"price"</span>: <span class="n">275</span>, <span class="k">"amount"</span>: <span class="n">2</span> }
+  ]
+}</pre><div class="op-sec">Responses</div><div class="op-resp"><b>200</b><div><p>Success · the saved order and its id</p><pre>{
+  <span class="k">"order"</span>: {
+    <span class="k">"orderid"</span>: <span class="n">311</span>,
+    <span class="k">"ordertime"</span>: <span class="s">"2025-04-19T10:42:00Z"</span>,
+    <span class="k">"orderstatus"</span>: <span class="s">"Pending"</span>,
+    <span class="k">"orderprice"</span>: <span class="n">1450</span>,
+    …
+  },
+  <span class="k">"id"</span>: <span class="n">311</span>
+}</pre></div></div><div class="op-resp"><b>500</b><div><p>Server error · the exception message</p></div></div></div></div><div class="op put"><b>PUT</b><code>/api/Order/EditOrder/{id}</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Order/GetOrders/{userId}</code><em class="me" title="Written by me">mine</em></div><div class="op get"><b>GET</b><code>/api/Order/GetOrderProducts/{orderId}</code><em class="me" title="Written by me">mine</em></div></div></div><figcaption>One endpoint opened: the customer app places an order with its line items in a single call.</figcaption></figure></div>
+    <p class="api-cap">Swagger UI recreated from the controllers and models in the repository. The data in the examples is invented.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>Code I wrote</h2><div><p>Placing an order is two writes: the order row, then one row per product with the price and quantity at the time of purchase. Favourites are a join table read in two queries. Both are EF Core against SQL Server, returning JSON the Flutter clients map into their own models.</p>
+      <div class="code-stack" style="margin-top:22px"><div class="code-card"><header><b>Controllers/OrderController.cs</b><span>order + line items · trimmed</span></header><pre>[<span class="a">HttpPost</span>(<span class="s">"MakeOrder"</span>)]
+<span class="k">public async</span> <span class="t">Task</span>&lt;<span class="t">ActionResult</span>&lt;<span class="t">Order</span>&gt;&gt; MakeOrder([<span class="a">FromBody</span>] <span class="t">OrderRequest</span> orderRequest)
+{
+    <span class="c">// Step 1: Create the order</span>
+    <span class="k">var</span> order = <span class="k">new</span> <span class="t">Order</span>
+    {
+        Userid = orderRequest.UserId,
+        Ordertime = <span class="t">DateTime</span>.UtcNow,
+        Orderstatus = orderRequest.OrderStatus,
+        Orderprice = orderRequest.OrderPrice,
+        Deliveryfees = orderRequest.DeliveryFees,
+        Ordergovernorate = orderRequest.OrderGovernorate,
+        <span class="c">// …phone, location, payment method, amount</span>
+    };
+
+    _context.Orders.Add(order);
+    <span class="k">await</span> _context.SaveChangesAsync();
+
+    <span class="c">// Step 2: Add products to the order</span>
+    <span class="k">foreach</span> (<span class="k">var</span> product <span class="k">in</span> orderRequest.OrderProducts)
+    {
+        _context.Orderprouductlists.Add(<span class="k">new</span> <span class="t">Orderprouductlist</span>
+        {
+            Orderid = order.Orderid,
+            Prouductid = product.ProuductId,
+            Price = product.Price,
+            Amount = product.Amount
+        });
+    }
+
+    <span class="k">await</span> _context.SaveChangesAsync();
+    <span class="k">return</span> Ok(<span class="k">new</span> { order = order, id = order.Orderid });
+}</pre></div><div class="code-card"><header><b>Controllers/ProductController.cs</b><span>favourites</span></header><pre>[<span class="a">HttpGet</span>(<span class="s">"GetAllFavorites"</span>)]
+<span class="k">public async</span> <span class="t">Task</span>&lt;<span class="t">ActionResult</span>&lt;<span class="t">IEnumerable</span>&lt;<span class="t">Prouduct</span>&gt;&gt;&gt; GetAllFavorites(<span class="k">int</span> userId)
+{
+    <span class="k">var</span> favoritesIds = <span class="k">await</span> _context.Usersprouducts
+        .Where(fav =&gt; fav.Userid == userId)
+        .Select(pr =&gt; pr.Prouductid)
+        .ToListAsync();
+
+    <span class="k">var</span> products = <span class="k">await</span> _context.Prouducts
+        .Where(product =&gt; favoritesIds.Contains(product.Productid))
+        .ToListAsync();
+
+    <span class="k">return</span> Ok(products);
+}</pre></div></div>
+      <p style="margin-top:22px">The request pipeline, in order, from <code>Program.cs</code>. I added static files so product, user and banner images are served straight from the API:</p><div class="pipe"><span>UseSwagger</span> <i>→</i> <span>UseHttpsRedirection</span> <i>→</i> <span>UseCors</span> <i>→</i> <span>UseAuthorization</span> <i>→</i> <span>UseStaticFiles</span> <i>→</i> <span>MapControllers</span></div></div></div>
+    <div class="case-body"><h2>Data model</h2><div><p><strong>8 tables</strong> in SQL Server, scaffolded database-first with EF Core Power Tools. Order line items keep their own price, so an order still shows what the customer paid after a product’s price changes. Products carry the filters the app offers dental students: <strong>study year</strong> (first to fifth), clothes and teeth. Delivery fees live in their own table so the dashboard can change them without a release.</p>
+      <div class="erd" style="margin-top:22px"><div class="ent hub"><h3>User<small></small></h3><ul><li class="pk">Userid<u>int</u></li><li class="">Username<u>string</u></li><li class="">Useremail<u>string</u></li><li class="">Userphone<u>string</u></li><li class="">Userphoto<u>string</u></li><li class="">FCMToken<u>string</u></li></ul></div><div class="ent hub"><h3>Prouduct<small></small></h3><ul><li class="pk">Productid<u>int</u></li><li class="">Prouductname<u>string</u></li><li class="">Price<u>decimal</u></li><li class="">Discount<u>decimal</u></li><li class="">Amount<u>int</u></li><li class="">Type<u>string</u></li><li class="">Firstyear … Fifthyear<u>string</u></li><li class="">Clothes / Teeth<u>string</u></li><li class="">Firstphoto … Sixthphoto<u>string</u></li></ul></div><div class="ent hub"><h3>Order<small></small></h3><ul><li class="pk">Orderid<u>int</u></li><li class="fk">Userid<u>→ User</u></li><li class="">Orderstatus<u>string</u></li><li class="">Orderprice<u>decimal</u></li><li class="">Deliveryfees<u>decimal</u></li><li class="">Ordergovernorate<u>string</u></li><li class="">Ordertime<u>DateTime</u></li><li class="">Orderaccepttime<u>DateTime</u></li></ul></div><div class="ent"><h3>Orderprouductlist<small>line items</small></h3><ul><li class="pk">Orderlistid<u>int</u></li><li class="fk">Orderid<u>→ Order</u></li><li class="fk">Prouductid<u>→ Prouduct</u></li><li class="">Price<u>decimal</u></li><li class="">Amount<u>int</u></li></ul></div><div class="ent"><h3>Usersprouduct<small>favourites</small></h3><ul><li class="pk">Id<u>int</u></li><li class="fk">Userid<u>→ User</u></li><li class="fk">Prouductid<u>→ Prouduct</u></li></ul></div><div class="ent"><h3>Notification<small></small></h3><ul><li class="pk">Notificationid<u>int</u></li><li class="fk">Userid<u>→ User</u></li><li class="">Notificationtext<u>string</u></li><li class="">Notificationtime<u>DateTime</u></li><li class="">Isread<u>string</u></li></ul></div><div class="ent"><h3>Maininfo<small>delivery fees</small></h3><ul><li class="pk">Id<u>int</u></li><li class="">Cairofees<u>int</u></li><li class="">OutCairoFees<u>int</u></li></ul></div><div class="ent"><h3>Panner<small>banners</small></h3><ul><li class="pk">Id<u>int</u></li><li class="">Link<u>string</u></li></ul></div></div>
+      <div class="erd-key"><span class="pk">■ primary key</span><span class="fk">■ reference → table (an id column, no FK constraint)</span><span>outlined green: the order flow</span></div></div></div>
+    <div class="case-body"><h2>An order, end to end</h2><div><p>One order touches all three codebases. I built both Flutter apps and the order endpoints; my teammate added the push notification when an order is accepted.</p><div style="margin-top:22px"><ol class="flow"><li><b>Order</b><span>The customer app sends the cart to <code>MakeOrder</code>: the order row, then a row per product.</span></li><li><b>Review</b><span>The dashboard loads <code>GetAllOrders</code> and each order’s products into a data grid.</span></li><li><b>Accept</b><span>An admin accepts the order, and the dashboard calls <code>EditOrder</code> with the status <code>Accepted</code>.</span></li><li><b>Notify</b><span>The API saves a notification for the customer.</span></li><li><b>Push</b><span>Firebase Cloud Messaging (HTTP v1) delivers it to the customer’s phone.</span></li><li><b>Track</b><span>The app shows it under notifications, and the order under history.</span></li></ol></div></div></div>
+    <div class="case-body"><h2>The apps</h2><div><ul><li><strong>Customer app</strong> (Flutter): a home banner slider, products by category with the study-year filters, product details, cart, checkout with the governorate and payment method, order history, notifications, and account sign-up, login and deletion.</li><li><strong>Admin dashboard</strong> (Flutter web): products in a data grid with add and edit forms, orders with their line items and an accept action, creating orders for customers, delivery fees, notifications, and <strong>PDF invoices</strong> with Arabic text.</li><li>Both on separate <strong>common, domain, data and di</strong> packages, with a Cubit per screen, get_it and Dio, in Arabic and English.</li></ul></div></div>
+    <div class="case-body"><h2>Who built what</h2><div><div class="credit"><div><h3>Me</h3><ul><li>The API project, the EF Core model and the first controllers: users, products, orders, banners, notifications (21 of the 31 endpoints).</li><li>Favourites, the <code>BaseResponse&lt;T&gt;</code> envelope and static image serving.</li><li>The customer app: all 24 commits.</li><li>The admin dashboard: 16 of 17 commits.</li></ul></div><div><h3>My teammate</h3><ul><li>Image uploads: base64 in, resized to 500×500 with ImageSharp, saved as PNG.</li><li>Push notifications through Firebase Cloud Messaging.</li><li>The admin endpoints for delivery fees, banners and editing products, plus the study-year filters.</li><li>Error handling across the controllers.</li></ul></div></div></div></div>
+    <div class="case-body"><h2>What I’d do next</h2><div><p>The API was built fast to replace a rejected app, and it shows. These are the changes I’d make before it grows:</p><ul style="margin-top:14px"><li><strong>Authentication and roles</strong>: JWT with separate customer and admin roles, so only the dashboard can manage products and orders.</li><li><strong>Hashed passwords</strong> with ASP.NET Core Identity, and a login response that returns a token instead of the user record.</li><li><strong>A service layer</strong> between the controllers and EF Core, with request validation and one response envelope on every endpoint.</li><li><strong>Real foreign keys and migrations</strong>, and an order status that’s an enum instead of free text.</li></ul></div></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#0a7fc4"><div class="case-screens" aria-hidden="true"><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">Good evening</div><div class="ph-field">Search products<b>⌕</b></div><div class="ph-chips"><span class="on">3rd year</span><span>Clothes</span><span>Teeth</span></div><div class="ph-row"><i></i>Composite kit<em>900</em></div><div class="ph-row"><i></i>Typodont<em>275</em></div></div></div><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">Checkout</div><div class="ph-field">Governorate<b>Cairo</b></div><div class="ph-field">Pay with<b>Cash</b></div><div class="ph-cta">Place order</div></div></div><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">Notifications</div><div class="ph-row"><i></i>Your order has been accepted</div><div class="ph-row"><i></i>New arrivals this week</div></div></div></div><figcaption>Illustrative mockups of the customer app with invented data.</figcaption></figure>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="nca.html">Next: NCA <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
