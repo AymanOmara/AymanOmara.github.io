@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahtk — Ayman Omara</title>
+<meta name="description" content="Rahtk, a full-stack e-commerce product: a Flutter client and a .NET 8 API with recurring reorder reminders on Hangfire and push notifications through Firebase.">
+<meta property="og:title" content="Rahtk — case study by Ayman Omara">
+<meta property="og:description" content="Rahtk, a full-stack e-commerce product: a Flutter client and a .NET 8 API with recurring reorder reminders on Hangfire and push notifications through Firebase.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/rahtk.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-rahtk"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · FULL-STACK E-COMMERCE · FLUTTER + .NET 8</div>
+    <h1>An e-commerce app that reminds you to reorder.</h1>
+    <p class="lead">Rahtk is a shopping app with one extra idea: group the products you buy regularly into a reminder, and the app nudges you when it’s time to order again. I built both sides, the Flutter client and the .NET 8 API behind it.</p>
+    <div class="case-facts"><div><b>32</b><span>API endpoints</span></div><div><b>20</b><span>App screens</span></div><div><b>11</b><span>Domain entities</span></div><div><b>2</b><span>Languages, end to end</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#5f8f12"><div class="case-screens" aria-hidden="true"><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">Good morning</div><div class="ph-field">Search products<b>⌕</b></div><div class="ph-grid"><div class="ph-tile"><i></i>Coffee</div><div class="ph-tile"><i></i>Snacks</div><div class="ph-tile"><i></i>Cleaning</div><div class="ph-tile"><i></i>Baby care</div></div></div></div><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">New reminder</div><div class="ph-field">Title<b>Monthly coffee</b></div><div class="ph-row"><i></i>Coffee beans<em>✓</em></div><div class="ph-row"><i></i>Filter papers<em>✓</em></div><div class="ph-field">Remind me every<b>30 days</b></div><div class="ph-cta">Save reminder</div></div></div><div class="phone" dir="ltr" lang="en"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">Your cart</div><div class="ph-title">3 items</div><div class="ph-row"><i></i>Coffee beans<em>320</em></div><div class="ph-row"><i></i>Filter papers<em>45</em></div><div class="ph-field">Pay with<b>Cash</b></div><div class="ph-cta">Checkout</div></div></div></div><figcaption>Illustrative mockups with invented data. The code for both apps is public.</figcaption></figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The idea</h2><div><p>Many household purchases repeat on a rhythm: coffee every month, filters every few weeks. Rahtk lets a shopper pick several products, give the group a title and an interval in days, and get a <strong>push notification</strong> when it’s time to reorder, alongside the usual browsing, favourites, cart and checkout.</p></div></div>
+    <div class="case-body"><h2>The mobile app</h2><div><ul><li><strong>20 screens</strong>: onboarding, sign-up with email OTP verification and password reset, home, categories, product details, favourites, cart, checkout, order history, addresses with location lookup, reminders and a notification centre.</li><li>One Cubit per screen on separate <strong>common, domain, data and di</strong> packages, with get_it for wiring.</li><li>A Dio client that returns a typed <strong>Result</strong>, and a refresh-token interceptor that holds failed requests during a 401, refreshes the session once, then retries them.</li><li>Firebase Cloud Messaging for pushes, shown in the foreground with local notifications, in Arabic and English.</li></ul></div></div>
+    <div class="case-body"><h2>The API</h2><div><ul><li>A <strong>.NET 8</strong> solution split into Api, Application, Domain, Contracts, Infrastructure, Shared and an IoC composition root.</li><li><strong>32 endpoints</strong> across users, products, categories, orders, addresses, payment options and reminders, with ASP.NET Core Identity, JWT access and refresh tokens, and Swagger.</li><li><strong>EF Core</strong> on SQL Server with 11 entities. Product names and descriptions are stored in both languages, and responses are localized from the request’s language.</li><li>Each reminder is a <strong>Hangfire</strong> recurring job stored in SQL Server. When it’s due, <strong>Firebase Admin</strong> sends the push and the API saves it to the user’s notification centre.</li></ul></div></div>
+    <div class="case-body"><h2>Architecture</h2><div><div class="layers"><div class="layer"><code>Flutter app</code><span>Screens and Cubits → di → data → domain → common</span></div><div class="layer-arrow" aria-hidden="true">↓ REST + JWT</div><div class="layer"><code>Rahtk.Api</code><span>Controllers, Identity and JWT, Swagger</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>Application</code><span>Services and DTOs</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>Infrastructure</code><span>EF Core, Hangfire, Firebase Admin, email</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>Domain</code><span>Entities and contracts</span></div></div></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>One developer, both ends of the product: a Flutter client and a layered .NET 8 API that share one idea, <strong>reorder reminders</strong>, from the form on the phone to the scheduled job and the push that comes back.</p><p>Code: <a href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener">rahtk-mobile ↗</a> · <a href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener">rahtk ↗</a></p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="nca.html">Next: NCA <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>

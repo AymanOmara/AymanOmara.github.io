@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Learning — Ayman Omara</title>
+<meta name="description" content="Next Learning, a Flutter client for a course platform built solo for a client: strict package boundaries, token refresh, generic pagination and a 10-filter search drawer.">
+<meta property="og:title" content="Next Learning — case study by Ayman Omara">
+<meta property="og:description" content="Next Learning, a Flutter client for a course platform built solo for a client: strict package boundaries, token refresh, generic pagination and a 10-filter search drawer.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/next-learning.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-nextlearning"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · CLIENT PROJECT · FLUTTER</div>
+    <h1>A course platform app, built solo from Figma.</h1>
+    <p class="lead">Next Learning is a mobile client for a training platform: learners find courses by their interests, filter them in depth, and send inquiries. I built the whole app alone, from a Figma design against the client’s existing API, in Arabic and English.</p>
+    <div class="case-facts"><div><b>85</b><span>Commits, all mine</span></div><div><b>40</b><span>API endpoints</span></div><div><b>22</b><span>Screens</span></div><div><b>281</b><span>Keys in each language</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#b8336f"><div class="case-screens" aria-hidden="true"><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">الرئيسية</div><div class="ph-chips"><span class="on">الكل</span><span>برمجة</span><span>إدارة</span></div><div class="ph-row"><i></i>أساسيات Flutter<em>4.8</em></div><div class="ph-row"><i></i>تحليل البيانات<em>4.6</em></div><div class="ph-row"><i></i>القيادة الفعالة<em>4.7</em></div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">تصفية النتائج</div><div class="ph-field">التصنيف الرئيسي<b>تقنية</b></div><div class="ph-field">التصنيف<b>برمجة</b></div><div class="ph-field">الموضوع<b>تطبيقات الجوال</b></div><div class="ph-field">التاريخ<b>مارس – أبريل</b></div><div class="ph-cta">عرض النتائج</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">طلباتي</div><div class="ph-chips"><span class="on">الوارد</span><span>السجل</span></div><div class="ph-row"><i></i>استفسار عن دورة<em>جديد</em></div><div class="ph-row"><i></i>تواصل معنا<em>مغلق</em></div><div class="ph-row"><i></i>استفسار عن دورة<em>مغلق</em></div></div></div></div><figcaption>Illustrative mockups with invented data. The client UI is not shown.</figcaption></figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The brief</h2><div><p>Turn a Figma design into a working app on top of an API that already existed: browsing and searching courses, course details, and a way for learners to reach the provider, with <strong>guest browsing</strong> and sign-in only where it matters.</p></div></div>
+    <div class="case-body"><h2>What I built</h2><div><ul><li><strong>Onboarding</strong>: sign-in or continue as a guest, two-step registration with a profile photo, then a four-step interests flow from main category down to topic.</li><li><strong>Discovery</strong>: a home tab with a hero carousel, courses by category, strategic providers and FAQs, and an Explore tab with paginated search.</li><li><strong>A 10-filter search drawer</strong> whose category filters cascade (main category, category, sub-category, topic), plus a date range.</li><li><strong>Course details</strong> in six tabs, from the outline to the time plan, with a course inquiry sheet and prices for signed-in learners.</li><li><strong>Requests</strong> with Inbox and History tabs, profile editing, change password, contact us, and a language switch.</li></ul></div></div>
+    <div class="case-body"><h2>Engineering</h2><div><ul><li>Strict package boundaries: the app talks to <strong>domain</strong> only and never imports <strong>data</strong>. get_it wires the layers, with <code>registerFactoryParam</code> to pass arguments into screen cubits.</li><li>Every call goes through one API caller that returns a sealed <strong>Result</strong>. On a 401, a refresh-token interceptor refreshes once, queues and retries the other requests, and marks retries so they can’t loop.</li><li>A generic <strong>pagination controller</strong> that drops stale responses when a new search starts.</li><li>The filter drawer and the Explore screen never reference each other: the drawer publishes a search on an <strong>event bus</strong> and Explore reloads. The same bus refreshes Requests and Interests after changes elsewhere.</li><li>One Cubit per screen with <code>LoadingState</code> fields, shimmer placeholders, named routes and theme tokens.</li></ul></div></div>
+    <div class="case-body"><h2>Architecture</h2><div><div class="layers"><div class="layer"><code>lib</code><span>Screens, one Cubit per screen, the event bus</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>di</code><span>get_it registration for data and repositories</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>data</code><span>9 Retrofit services, interceptors, models, repositories</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>domain</code><span>Entities, repository contracts, Result and exceptions</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>common</code><span>Environment, obfuscated base URLs, logging</span></div></div></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>A complete learner app on <strong>40 endpoints</strong> across 22 screens, built by one developer from design to finish, with every string in both <strong>Arabic and English</strong>.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="rahtk.html">Next: Rahtk <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
