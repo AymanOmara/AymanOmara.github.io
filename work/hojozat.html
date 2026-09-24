@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hojozat — Ayman Omara</title>
+<meta name="description" content="Hojozat: taking over two Flutter chalet-booking apps in Kuwait, rebuilding reservations and payment, adding QR check-in, and shipping the customer app as three brands.">
+<meta property="og:title" content="Hojozat — case study by Ayman Omara">
+<meta property="og:description" content="Hojozat: taking over two Flutter chalet-booking apps in Kuwait, rebuilding reservations and payment, adding QR check-in, and shipping the customer app as three brands.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/hojozat.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-hojozat"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · RESERVATIONS · KUWAIT · FLUTTER</div>
+    <h1>Two booking apps, taken over and shipped as three brands.</h1>
+    <p class="lead">Hojozat lets people in Kuwait book chalets and clubs, and lets owners manage those bookings. I took over both Flutter apps, the customer app and the owner app, rebuilt how booking and payment work, connected the two with QR check-in, and turned the customer app into three branded apps.</p>
+    <div class="case-facts"><div><b>80/81</b><span>Customer app commits</span></div><div><b>37/38</b><span>Owner app commits</span></div><div><b>4</b><span>Booking types, one flow</span></div><div><b>3</b><span>Branded apps</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#a4702a"><div class="case-screens" aria-hidden="true"><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">شاليه الخيران</div><div class="ph-chips"><span>١٢</span><span class="on">١٣</span><span class="on">١٤</span><span>١٥</span></div><div class="ph-field">الوصول<b>الخميس ١٣</b></div><div class="ph-field">المغادرة<b>السبت ١٥</b></div><div class="ph-cta">احجز الآن</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-title">الدفع</div><div class="ph-chips"><span>فردي</span><span class="on">مشترك</span></div><div class="ph-field">عدد المشاركين<b>٤</b></div><div class="ph-field">الإجمالي<b>٢٤٠ د.ك</b></div><div class="ph-cta">مشاركة رابط الدفع</div></div></div><div class="phone" dir="rtl" lang="ar"><div class="phone-screen"><div class="ph-status"><span>9:41</span><span>●●●</span></div><div class="ph-greet">تطبيق المالك</div><div class="ph-title">حجز #1873</div><div class="ph-row"><i></i>تم مسح رمز QR</div><div class="ph-field">الحالة<b>مدفوع</b></div><div class="ph-cta">تأكيد الاستلام</div></div></div></div><figcaption>Illustrative mockups with invented data: booking, split payment, and the owner’s QR check-in.</figcaption></figure>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="case-body" style="margin-bottom:34px"><h2>The API the apps use</h2><div><p>The backend belonged to the client; my side was everything the apps do with it. This is the API surface both apps call, drawn Swagger-style from the Dart networking code, with each endpoint tagged by the app that uses it.</p></div></div>
+    <div class="api-shots"><figure style="margin:0"><div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>api.hojozat · endpoints used by the apps</span></div><div class="sw"><div class="sw-head"><div><div class="sw-title">Hojozat API <small>client backend</small></div><span class="sw-sub">as called by the two Flutter apps</span></div></div><div class="sw-tag">Auth</div><div class="op post"><b>POST</b><code>/auth/login</code><em class="app" title="Customer app">C</em></div><div class="op post"><b>POST</b><code>/club-owners/auth/login</code><em class="app o" title="Owner app">O</em></div><div class="op post"><b>POST</b><code>/auth/login-mobile</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/auth/register</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/auth/verify-mobile</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/auth/resend-sms-otp</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/auth/forget-password</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/auth/reset-password-mobile</code><em class="app b" title="Both apps">C+O</em></div><div class="sw-tag">Account</div><div class="op get"><b>GET</b><code>/user/profile</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/user/profile</code><em class="app b" title="Both apps">C+O</em></div><div class="op put"><b>PUT</b><code>/user/change-password</code><em class="app b" title="Both apps">C+O</em></div><div class="op del"><b>DELETE</b><code>/user/delete-account</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/user-firebase-tokens</code><em class="app b" title="Both apps">C+O</em></div><div class="sw-tag">Content</div><div class="op get"><b>GET</b><code>/settings</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/pages/homepage</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/sliders</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/pages</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/contact-us</code><em class="app b" title="Both apps">C+O</em></div><div class="op get"><b>GET</b><code>/areas/cities</code><em class="app b" title="Both apps">C+O</em></div><div class="sw-tag">Clubs</div><div class="op get"><b>GET</b><code>/clubs</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/clubs/{id}</code><em class="app b" title="Both apps">C+O</em></div><div class="op get"><b>GET</b><code>/clubs/available-times</code><em class="app b" title="Both apps">C+O</em></div><div class="op get"><b>GET</b><code>/clubs/{id}/available-dates/{year}/{month}</code><em class="app b" title="Both apps">C+O</em></div><div class="op get"><b>GET</b><code>/payment-options</code><em class="app" title="Customer app">C</em></div><div class="sw-tag">Reservations</div><div class="op post"><b>POST</b><code>/reservations/price</code><em class="app b" title="Both apps">C+O</em></div><div class="op post"><b>POST</b><code>/reservations/reserve</code><em class="app b" title="Both apps">C+O</em></div><div class="op get"><b>GET</b><code>/user/reservations</code><em class="app" title="Customer app">C</em></div><div class="op post"><b>POST</b><code>/reservations/cancel-reservation</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/user/reservations/{id}/qrc</code><em class="app" title="Customer app">C</em></div><div class="sw-tag">Owner</div><div class="op get"><b>GET</b><code>/club-owners/clubs</code><em class="app o" title="Owner app">O</em></div><div class="op get"><b>GET</b><code>/club-owners/{clubId}/reservations</code><em class="app o" title="Owner app">O</em></div><div class="op get"><b>GET</b><code>/club-owners/reservations/{id}</code><em class="app o" title="Owner app">O</em></div><div class="op post"><b>POST</b><code>/club-owners/cancel-reservation</code><em class="app o" title="Owner app">O</em></div><div class="op post"><b>POST</b><code>/club-owners/reservations/{id}/confirm</code><em class="app o" title="Owner app">O</em></div><div class="sw-legend"><span><em class="app" style="font-style:normal;font:600 10px var(--mono);padding:2px 6px;border-radius:3px;background:#3b4151;color:#fff">C</em> customer app</span><span><em style="font-style:normal;font:600 10px var(--mono);padding:2px 6px;border-radius:3px;background:#7c5cff;color:#fff">O</em> owner app</span><span><em style="font-style:normal;font:600 10px var(--mono);padding:2px 6px;border-radius:3px;background:#0f9d58;color:#fff">C+O</em> both</span></div></div></div><figcaption>34 endpoints across both apps, grouped by area.</figcaption></figure><figure style="margin:0"><div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>api.hojozat · reservations</span></div><div class="sw"><div class="sw-tag">Reservations</div><div class="op post"><b>POST</b><code>/reservations/price</code><em class="app b" title="Both apps">C+O</em></div><div class="op-open"><div class="op post"><b>POST</b><code>/reservations/reserve</code><em class="app b" title="Both apps">C+O</em></div><div class="op-body"><div class="op-sec">Parameters <span>Try it out</span></div><div class="op-param"><div><b>Authorization</b><small>string · (header)</small></div><p>Bearer token from login</p></div><div class="op-param" style="margin-top:8px"><div><b>Accept-Language</b><small>string · (header)</small></div><p><code>ar</code> or <code>en</code></p></div><div class="op-sec">Request body <span>application/json</span></div><pre>{
+  <span class="k">"club_id"</span>: <span class="s">"42"</span>,
+  <span class="k">"reservation_type"</span>: <span class="s">"days_range"</span>,
+  <span class="k">"payment_method"</span>: <span class="s">"shared"</span>,
+  <span class="k">"participants_number"</span>: <span class="n">4</span>,
+  <span class="k">"payment_gateway"</span>: <span class="n">2</span>,
+  <span class="k">"dates"</span>: [ { <span class="k">"from"</span>: <span class="s">"2024-02-15"</span>, <span class="k">"to"</span>: <span class="s">"2024-02-17"</span> } ],
+  <span class="k">"client_data"</span>: {
+    <span class="k">"primary_phone_number"</span>: <span class="s">"+965 5xxxxxxx"</span>,
+    <span class="k">"area"</span>: <span class="s">"<bdi dir="rtl" class="ar">الخيران</bdi>"</span>,
+    <span class="k">"number_of_companions"</span>: <span class="n">3</span>,
+    …
+  }
+}</pre><div class="op-sec">Responses</div><div class="op-resp"><b>200</b><div><p>Reservation created. With a shared payment, the link goes to the other participants.</p><pre>{
+  <span class="k">"success"</span>: <span class="n">true</span>,
+  <span class="k">"message"</span>: <span class="s">"<bdi dir="rtl" class="ar">تم إنشاء الحجز</bdi>"</span>,
+  <span class="k">"data"</span>: {
+    <span class="k">"reservation_id"</span>: <span class="n">1873</span>,
+    <span class="k">"payment_share_link"</span>: <span class="s">"https://…/pay/…"</span>,
+    <span class="k">"paid"</span>: <span class="n">false</span>
+  }
+}</pre></div></div></div></div><div class="op get"><b>GET</b><code>/user/reservations</code><em class="app" title="Customer app">C</em></div><div class="op get"><b>GET</b><code>/user/reservations/{id}/qrc</code><em class="app" title="Customer app">C</em></div></div></div><figcaption>One call opened: a days-range booking with the bill split between four people.</figcaption></figure></div>
+    <p class="api-cap">Recreated from the request and model classes in the apps. The host is omitted and the example data is invented.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>Starting point</h2><div><p>Both apps came to me as an agency’s working codebase, already booking chalets. From there I made <strong>80 of 81</strong> commits to the customer app and <strong>37 of 38</strong> to the owner app, rewriting most of the booking and payment code along the way.</p></div></div>
+    <div class="case-body"><h2>What I built</h2><div><ul><li><strong>An availability calendar</strong>, written from scratch: it loads availability month by month, caches the months it has seen, and blocks past and unavailable days.</li><li><strong>Reservations and payment</strong>, rebuilt: pricing with insurance and discounts, a choice of payment method, <strong>split payments</strong> with a share link, and cancelling the booking if payment fails.</li><li><strong>Server-driven client forms</strong>: the API decides which of about 19 fields (civil number, passport, address and more) each club shows and requires, and the form builds itself from those rules.</li><li><strong>Push notifications</strong> in both apps. Tapping one in the owner app opens the reservation it’s about.</li><li><strong>QR check-in</strong> on both sides, booking on a customer’s behalf from the owner app, and <strong>free reservations</strong> that skip payment.</li></ul></div></div>
+    <div class="case-body"><h2>Code from the apps</h2><div><p>Four kinds of booking share one flow: <strong>by the hour</strong>, <strong>a range of days</strong>, <strong>packages</strong> and <strong>events</strong>. The request builder adds dates or time slots depending on the club’s type, and the owner app confirms a check-in by sending back the secret from the customer’s QR code.</p>
+      <div class="code-stack" style="margin-top:22px"><div class="code-card"><header><b>customer app · reservation_payment_details_controller.dart</b><span>request builder · trimmed</span></header><pre><span class="t">Map</span>&lt;<span class="t">String</span>, <span class="k">dynamic</span>&gt; createReservationRequest() {
+  <span class="k">var</span> data = {
+    <span class="s">"club_id"</span>: clubData?.id?.toString() ?? <span class="s">""</span>,
+    <span class="s">"payment_method"</span>: state.selectedPaymentMethod.value.title,
+    <span class="s">"reservation_type"</span>: clubData?.reservationType ?? <span class="s">""</span>,
+    <span class="s">"participants_number"</span>: state.selectedPaymentMethod.value == <span class="t">PaymentMethod</span>.SHARED
+        ? state.personsCount.value : <span class="s">"1"</span>,
+    <span class="s">"payment_gateway"</span>: state.selectedPaymentOption?.value.paymentGetWayId,
+    <span class="s">"client_data"</span>: { <span class="s">"primary_phone_number"</span>: reservationData?.phone ?? <span class="s">""</span>, <span class="c">/* …the fields the server asks for */</span> },
+  };
+  <span class="k">if</span> (clubData?.reservationType == <span class="s">"days_range"</span> || clubData?.reservationType == <span class="s">"days"</span>) {
+    data[<span class="s">"dates"</span>] = [{<span class="s">"from"</span>: reservationData?.selectedDate?.from, <span class="s">"to"</span>: reservationData?.selectedDate?.to}];
+  } <span class="k">else</span> <span class="k">if</span> (clubData?.reservationType == <span class="s">"hours"</span>) {
+    data[<span class="s">"times"</span>] = reservationData?.times?.map((e) =&gt; {<span class="s">"from"</span>: e.from, <span class="s">"to"</span>: e.to}).toList();
+    data[<span class="s">"date"</span>] = reservationData?.date;
+  }
+  <span class="k">return</span> data;
+}</pre></div><div class="code-card"><header><b>owner app · reservation_repository.dart</b><span>QR check-in</span></header><pre><span class="t">Future</span>&lt;<span class="t">LoadingState</span>&lt;<span class="t">StandardResponse</span>?&gt;&gt; confirmReceive({
+  <span class="k">required</span> <span class="k">int</span> reservationID,
+  <span class="k">required</span> <span class="t">String</span> secret,
+}) =&gt;
+    networkHandler.postRequest(
+      <span class="t">StandardResponse</span>(),
+      <span class="s">"club-owners/reservations/$reservationID/confirm"</span>,
+      body: {<span class="s">"confirmation_secret"</span>: secret},
+    );</pre></div></div></div></div>
+    <div class="case-body"><h2>A booking, end to end</h2><div><p>The QR check-in joins the two apps: I built the customer side that shows the code and the owner side that scans and confirms it.</p><div style="margin-top:22px"><ol class="flow"><li><b>Book</b><span>The customer picks dates on the availability calendar and gets a price from <code>reservations/price</code>.</span></li><li><b>Pay</b><span>They pay alone or split the bill; a shared booking returns a link for the others.</span></li><li><b>QR</b><span>The customer’s reservation shows a QR code generated by the server.</span></li><li><b>Scan</b><span>At the chalet, the owner scans it. It carries the club, the reservation and a confirmation secret.</span></li><li><b>Open</b><span>The owner app jumps straight to that reservation.</span></li><li><b>Confirm</b><span>The owner confirms, and the app sends the secret back to the API.</span></li></ol></div></div></div>
+    <div class="case-body"><h2>One codebase, three apps</h2><div><p>I turned the customer app into a <strong>white-label</strong> product. Each brand is a branch with its own name and bundle id, running on one of two backends and sharing the booking features underneath.</p><div class="brands"><div class="brand"><b>Hojozat</b><code>com.tocaan.hojozat</code><span>Chalets and clubs in Kuwait. The original app.</span></div><div class="brand"><b>Family Chalet</b><code>com.deals.family_chalet</code><span>A redesigned brand on a second backend, shared with Jump Kids.</span></div><div class="brand"><b>Jump Kids</b><code>com.deals.jumpkids</code><span>A third brand on the same booking engine.</span></div></div></div></div>
+    <div class="case-body"><h2>A clean rewrite, started</h2><div><p>Growing features on an agency template got harder, so I started rewriting the customer app on separate <strong>data, domain and di</strong> packages: Cubits, use cases, get_it, a single Dio client and a sealed <code>Result</code> type. Login, home, categories, paginated clubs, club details and package bookings work in the rewrite. It hasn’t replaced the live app.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="nca.html">Next: NCA <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
