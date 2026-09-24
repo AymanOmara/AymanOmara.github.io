@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wirdi — Ayman Omara</title>
+<meta name="description" content="Wirdi, a Flutter app for the daily wird, the Quran and prayer times: designed and built solo, with a native Android adhan plugin and home-screen widgets.">
+<meta property="og:title" content="Wirdi — case study by Ayman Omara">
+<meta property="og:description" content="Wirdi, a Flutter app for the daily wird, the Quran and prayer times: designed and built solo, with a native Android adhan plugin and home-screen widgets.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/wirdi.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-wirdi"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · PERSONAL PRODUCT · FLUTTER</div>
+    <h1>Your daily wird, the Quran and prayer times in one app.</h1>
+    <p class="lead">Wirdi (وِردي) brings awrad and adhkar, the Quran with recitations and tafsir, and prayer times with the adhan into one Arabic and English app. I designed and built it on my own, from the architecture to the native Android parts.</p>
+    <div class="case-facts"><div><b>19</b><span>Features</span></div><div><b>247</b><span>Of 249 commits</span></div><div><b>740+</b><span>Automated tests</span></div><div><b>2</b><span>Languages, with RTL</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#0f7a47">
+      <div class="case-screens"><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/wirdi/quran.webp" alt="Quran reader showing Surah Al Fatiha" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/wirdi/home.webp" alt="Awrad home screen with search, your own wird and awrad by need" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/wirdi/prayer.webp" alt="Prayer times with the next prayer and a countdown" width="600" height="1304" loading="lazy" decoding="async"></div></div></div>
+      <figcaption>Real screenshots from the iOS app in dark mode. Prayer times shown for Riyadh.</figcaption>
+    </figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The problem</h2><div><p>A daily wird usually means several apps: one for adhkar, one for the Quran, one for prayer times and the adhan. Wirdi puts them in one place, arranged <strong>by need</strong>: provision, healing, relief from distress, istikhara and more, with a counter for each zikr.</p></div></div>
+    <div class="case-body"><h2>What I built</h2><div><ul><li><strong>Awrad and your own wird</strong>: awrad and adhkar by need with a counter, favourites, search, and a personal wird built from the awrad and the Quran with a reminder at the time you choose.</li><li><strong>The Quran</strong>: a Mushaf page reader, surahs, juz and bookmarks, recitations from chosen reciters that keep playing in the background, and tafsir read ayah by ayah.</li><li><strong>Prayer</strong>: times for your location, the next prayer with a countdown, a choice of adhan voice, and a qibla compass.</li><li><strong>Library</strong>: a hadith and a sunnah every day, the six hadith books and the forties, and a Hijri calendar with occasions and the Ramadan timetable.</li><li>A guided onboarding and an in-app tour, Arabic and English with RTL, and light and dark themes.</li></ul></div></div>
+    <div class="case-body"><h2>Native Android</h2><div><p>Notifications alone could not play a full adhan reliably, so I wrote a <strong>local Android plugin</strong> in Kotlin. It schedules each prayer with <code>AlarmManager.setAlarmClock</code>, falls back when exact alarms aren’t allowed, and plays the adhan from a foreground media service with a Stop action, <strong>even when the app is closed</strong>. Workmanager keeps the schedule current from a background isolate.</p><p>Three <strong>home-screen widgets</strong> (next prayer, today’s prayers and the Hijri date) are also native Kotlin.</p></div></div>
+    <div class="case-body"><h2>Architecture</h2><div><div class="layers"><div class="layer"><code>lib</code><span>Screens and one Cubit per screen, 19 feature folders</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>di</code><span>get_it registration that wires the layers together</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>data</code><span>API clients, local storage and repository implementations</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>domain</code><span>Entities and repository contracts</span></div><div class="layer-arrow" aria-hidden="true">↓ depends on</div><div class="layer"><code>common</code><span>Shared types and utilities used by every layer</span></div></div></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>One app in place of several, built by one developer: <strong>19 features</strong> on separate common, domain, data and di packages, with <strong>740+ automated tests</strong>, in Arabic and English.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="nca.html">Next: NCA <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
