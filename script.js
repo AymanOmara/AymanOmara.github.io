@@ -86,3 +86,43 @@ function updateCairoTime() {
 }
 updateCairoTime();
 setInterval(updateCairoTime,60000);
+
+// Mockup screens play once when their card comes into view.
+if('IntersectionObserver' in window && !reducedMotion){
+  const liveObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    liveObserver.unobserve(entry.target);
+    entry.target.classList.add('live');
+    const value=entry.target.querySelector('.ph-value b');
+    const match=value&&value.textContent.match(/^(\D*)([\d,]+)$/);
+    if(match){
+      const target=parseInt(match[2].replace(/,/g,''),10),start=performance.now()+500;
+      const step=now=>{
+        const t=Math.max(0,Math.min((now-start)/1200,1)),eased=1-Math.pow(1-t,3);
+        value.textContent=match[1]+Math.round(target*(.8+.2*eased)).toLocaleString('en-US');
+        if(t<1)requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+  }),{threshold:.35});
+  document.querySelectorAll('.project-art').forEach(art=>liveObserver.observe(art));
+  document.querySelectorAll('.ph-clock b').forEach(b=>{b.innerHTML=b.textContent.replace(':','<span class="colon">:</span>')});
+  document.querySelectorAll('.gov-art .ph-cta').forEach(cta=>cta.classList.add('gov-cta-pulse'));
+}
+
+// Featured cards tilt toward the pointer on devices with a precise hover pointer.
+if(!reducedMotion && matchMedia('(hover: hover) and (pointer: fine)').matches){
+  document.querySelectorAll('.featured .project-art').forEach(art=>{
+    let frame=0,x=0,y=0;
+    const apply=()=>{frame=0;art.style.setProperty('--mx',x.toFixed(3));art.style.setProperty('--my',y.toFixed(3))};
+    const card=art.closest('.proj');
+    card.addEventListener('pointermove',event=>{
+      const rect=art.getBoundingClientRect();
+      x=Math.max(-1,Math.min(1,(event.clientX-rect.left)/rect.width*2-1));
+      y=Math.max(-1,Math.min(1,(event.clientY-rect.top)/rect.height*2-1));
+      art.classList.add('tilting');
+      if(!frame)frame=requestAnimationFrame(apply);
+    });
+    card.addEventListener('pointerleave',()=>{x=0;y=0;art.classList.remove('tilting');if(!frame)frame=requestAnimationFrame(apply)});
+  });
+}

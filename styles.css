@@ -1068,3 +1068,31 @@ html[lang="ar"] h2, html[lang="ar"] .introduction h2, html[lang="ar"] .contact-b
 .socials { align-items: center; row-gap: 14px; }
 .socials a.btn.ghost { background: transparent; border-color: transparent; padding-inline: 12px; color: var(--muted); text-decoration: underline; text-decoration-color: #ffffff33; text-underline-offset: 5px; }
 .socials a.btn.ghost:hover { color: var(--text); text-decoration-color: var(--accent-soft); transform: none; background: transparent; }
+
+/* ---- Living mockups: screens play once when their card comes into view ---- */
+.motion-ready .project-art .phone-screen > * { opacity: 0; transform: translateY(5cqw); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms + 150ms); }
+.motion-ready .project-art.live .phone-screen > * { opacity: 1; transform: none; }
+.phone-screen > :nth-child(2) { --i: 1; } .phone-screen > :nth-child(3) { --i: 2; } .phone-screen > :nth-child(4) { --i: 3; }
+.phone-screen > :nth-child(5) { --i: 4; } .phone-screen > :nth-child(6) { --i: 5; } .phone-screen > :nth-child(7) { --i: 6; }
+.phone-screen > :nth-child(8) { --i: 7; } .phone-screen > :nth-child(n+9) { --i: 8; }
+/* Chart line draws from the start of the timeline; bars fill from the inline start. */
+.motion-ready .project-art .ph-chart { clip-path: inset(0 100% 0 0); transition: opacity .5s var(--ease-out) calc(var(--i, 0) * 70ms + 150ms), transform .5s var(--ease-out) calc(var(--i, 0) * 70ms + 150ms), clip-path 1.2s cubic-bezier(.65,0,.35,1) .45s; }
+.motion-ready .project-art.live .ph-chart { clip-path: inset(0 0 0 0); }
+.motion-ready .project-art .ph-bar i { transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease-out) .6s; }
+.motion-ready .project-art .ph-bar i:dir(rtl) { transform-origin: right; }
+.motion-ready .project-art.live .ph-bar i { transform: none; }
+/* NCA: the clock ticks and the check-in button invites a tap. */
+.ph-clock .colon { animation: colon-blink 1s steps(1) infinite; }
+@keyframes colon-blink { 50% { opacity: .25; } }
+.project-art.live .gov-cta-pulse { animation: cta-pulse 2.4s var(--ease-out) 1.2s 2; }
+@keyframes cta-pulse { 0% { box-shadow: 0 0 0 0 #47edff99; } 70%, 100% { box-shadow: 0 0 0 4cqw #47edff00; } }
+
+/* ---- Featured cards: the phone follows the pointer, the dot grid drifts the other way ---- */
+.featured .project-art { --mx: 0; --my: 0; }
+.featured .project-art::after { transform: translate(calc(var(--mx) * -10px), calc(var(--my) * -10px)); transition: transform .5s var(--ease-out); }
+.featured .project-art.tilting .phone-art { transform: translateX(-50%) translateY(-10px) perspective(700px) rotateX(calc(var(--my) * -9deg)) rotateY(calc(var(--mx) * 12deg)); }
+
+@media(prefers-reduced-motion:reduce) {
+  .ph-clock .colon, .project-art.live .gov-cta-pulse { animation: none; }
+  .featured .project-art::after { transform: none; }
+}
