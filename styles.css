@@ -1139,7 +1139,7 @@ html[lang="ar"] h2, html[lang="ar"] .introduction h2, html[lang="ar"] .contact-b
 .op-param p { margin: 0; }
 .sw pre { margin: 6px 0 0; padding: 12px 14px; border-radius: 4px; background: #333; color: #fff; font: 11.5px/1.55 var(--mono); overflow-x: auto; white-space: pre; }
 .sw pre .k { color: #a2fca2; } .sw pre .s { color: #fcc28c; } .sw pre .n { color: #d36363; }
-.op-resp { display: grid; grid-template-columns: 44px 1fr; gap: 10px; font-size: 12px; margin-top: 4px; }
+.op-resp { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; font-size: 12px; margin-top: 4px; }
 .op-resp > b { font-weight: 700; }
 .op-resp p { margin: 0 0 4px; }
 .pipe { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
@@ -1170,7 +1170,7 @@ html[lang="ar"] h2, html[lang="ar"] .introduction h2, html[lang="ar"] .contact-b
 .flow { padding: 0; margin: 0; }
 @media (max-width: 1000px) { .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
-  .api-shots { grid-template-columns: 1fr; }
+  .api-shots { grid-template-columns: minmax(0, 1fr); }
   .flow { grid-template-columns: 1fr 1fr; }
   .op-param { grid-template-columns: 1fr; gap: 4px; }
   .sw { padding: 14px 12px 18px; }
