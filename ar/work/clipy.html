@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clipy — أيمن عمارة</title>
+<meta name="description" content="Clipy، مدير حافظة أصلي لـ macOS مبني بـ Swift وSwiftUI وAppKit: لوحة بطاقات تنزلق من أسفل الشاشة، ولوحات تثبيت، ومقتطفات نصية، وقائمة لصق متتابع، وقراءة النص داخل الصور، ولصق تلقائي، ويعمل كله دون اتصال.">
+<meta property="og:title" content="Clipy — دراسة حالة من أيمن عمارة">
+<meta property="og:description" content="Clipy، مدير حافظة أصلي لـ macOS مبني بـ Swift وSwiftUI وAppKit: لوحة بطاقات تنزلق من أسفل الشاشة، ولوحات تثبيت، ومقتطفات نصية، وقائمة لصق متتابع، وقراءة النص داخل الصور، ولصق تلقائي، ويعمل كله دون اتصال.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_EG">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/ar/work/clipy.html">
+<link rel="alternate" hreflang="en" href="https://aymanomara.github.io/work/clipy.html">
+<link rel="alternate" hreflang="ar" href="https://aymanomara.github.io/ar/work/clipy.html">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+<nav aria-label="التنقل الرئيسي">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="أيمن عمارة، الصفحة الرئيسية">أيمن عمارة</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">الأعمال</a>
+        <a href="../#about">نبذة</a>
+        <a href="../#experience">الخبرات</a>
+        <a href="../../work/clipy.html" class="lang-switch" lang="en" hreflang="en">English</a>
+        <a href="../#contact" class="nav-contact">لنتحدث <span>↖</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="فتح القائمة" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-clipy"><span aria-hidden="true">→</span> كل الأعمال</a>
+    <div class="eyebrow">دراسة حالة · macOS · SWIFT · SWIFTUI · APPKIT</div>
+    <h1>مدير حافظة لا يغادر جهاز الـ Mac أبدًا.</h1>
+    <p class="lead">يحتفظ Clipy بكل ما تنسخه، من نصوص وصور وملفات، ويعيده إليك باختصار واحد أو بسحبة إصبعين. أضاف الإصدار 1.1 لوحات التثبيت والمقتطفات النصية وقائمة اللصق المتتابع والبحث داخل الصور. إنه تطبيق macOS أصلي مبني بـ Swift وSwiftUI وAppKit، وصُمِّم ليعمل دون اتصال بالكامل: لا يُرسَل أي شيء تنسخه إلى أي مكان.</p>
+    <div class="case-facts"><div><b>63</b><span>ملف Swift</span></div><div><b>~5.1k</b><span>سطر Swift</span></div><div><b>38</b><span>اختبار وحدة</span></div><div><b>0</b><span>اتصال بالشبكة</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="shot-frame"><img src="../../assets/clipy/panel-desktop.webp?v=1.1" alt="لوحة Clipy تنزلق من أسفل الشاشة، وفيها بطاقات لرابط، وصورة تعرّف التطبيق على النص الذي فيها، وشيفرة ملوّنة، وعيّنة لون، ونص منسّق، وعنصران في قائمة اللصق المتتابع" width="1600" height="457"><figcaption>مرسومة من واجهات SwiftUI الخاصة بـ Clipy ببيانات تجريبية، مع بدائل في الذاكرة بدلًا من الحافظة والقرص.</figcaption></figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>الفكرة</h2><div><p>يتذكّر macOS آخر شيء نسخته فقط. أما Clipy فيتذكّر آخر 50 عنصرًا (أو العدد الذي تحدّده) ويعرضها <strong>بطاقاتٍ تفهمها بنظرة واحدة</strong>: النص، أو معاينة للصورة، أو الملف، مع التطبيق الذي نُسخ منه ووقت نسخه. ابحث، وصفِّ حسب النوع، وثبّت ما تعيد استخدامه، والصق بضغطة رقم.</p></div></div>
+    <div class="case-body"><h2>الجديد في 1.1</h2><div><ul><li><strong>بطاقات ذكية.</strong> يتعرّف التطبيق على الروابط والألوان (مع عيّنة حيّة) وعناوين البريد وأرقام الهاتف والشيفرة (مع تلوين الصياغة)، ولكلٍّ منها تبويب خاص.</li><li><strong>يحتفظ بالتنسيق.</strong> النص المنسوخ من Pages أو Notes أو المتصفح يُلصق بتنسيقه كما هو، و<strong dir="ltr">⌥↩</strong> يلصقه نصًا عاديًا.</li><li><strong>قائمة اللصق المتتابع.</strong> أضف البطاقات إلى القائمة بـ <strong dir="ltr">⇧↩</strong>، ثم اضغط <strong dir="ltr">⌃⌘V</strong> في أي تطبيق لتلصقها واحدة تلو الأخرى، وهذا مفيد عند ملء النماذج.</li><li><strong>لوحات التثبيت والمقتطفات.</strong> اجمع العناصر في تبويبات مسمّاة وملوّنة، واحفظ النصوص التي تلصقها كثيرًا مع المتغيّرات <code>{date}</code> و<code>{time}</code> و<code>{clipboard}</code>.</li><li><strong>البحث داخل الصور.</strong> يقرأ إطار Vision من Apple النص الموجود في لقطات الشاشة المنسوخة على جهازك نفسه، فيصبح قابلًا للبحث. ويفهم البحث أيضًا المرشّحات <code>app:</code> و<code>type:</code> و<code>date:</code> و<code>board:</code>.</li><li><strong>المعاينة السريعة والتحويلات.</strong> مفتاح <strong>المسافة</strong> يعرض العنصر كاملًا، والنقر بالزر الأيمن يلصقه بأحرف كبيرة أو JSON منسّقًا أو Base64 وغير ذلك.</li><li><strong>تحكّم أكبر في الخصوصية.</strong> اختر تطبيقات لا يُحفظ ما يُنسخ منها أبدًا، واحذف السجل تلقائيًا بعد مدة بين يوم و90 يومًا.</li><li><strong>إجراءات لتطبيق Shortcuts</strong> لجلب عناصر الحافظة والبحث فيها وحفظها من أتمتتك الخاصة.</li></ul></div></div>
+    <div class="case-body"><h2>العمل مع macOS</h2><div><p>معظم العمل يقع في المواضع التي يحتاج فيها التطبيق إلى الخروج من نافذته: مراقبة حافظة النظام، والتقاط اختصار في كل التطبيقات، واللصق داخل تطبيق آخر.</p>
+      <div class="code-stack" style="margin-top:22px"><div class="code-card"><header><b>Clipy/ClipboardMonitor.swift</b><span>privacy filter · trimmed</span></header><pre><span class="k">private</span> <span class="k">func</span> checkPasteboard() {
+    <span class="k">let</span> currentChangeCount = pasteboard.changeCount
+    <span class="k">guard</span> currentChangeCount != lastChangeCount <span class="k">else</span> { <span class="k">return</span> }
+    lastChangeCount = currentChangeCount
+
+    <span class="c">// Passwords and one-off values are never recorded</span>
+    <span class="k">if</span> <span class="k">let</span> types = pasteboard.types, !ignoredTypes.isDisjoint(with: types) { <span class="k">return</span> }
+
+    <span class="c">// Neither is anything copied in an app the user chose to ignore</span>
+    <span class="k">let</span> sourceApp = <span class="t">NSWorkspace</span>.shared.frontmostApplication
+    <span class="k">if</span> exclusions.isExcluded(bundleID: sourceApp?.bundleIdentifier) { <span class="k">return</span> }
+
+    <span class="c">// Every file of a selection, an image, or text with its RTF/HTML</span>
+    <span class="k">guard let</span> content = readContent() <span class="k">else</span> { <span class="k">return</span> }
+    onClipboardChanged?(<span class="t">ClipboardCapture</span>(
+        content: content,
+        sourceAppName: sourceApp?.localizedName,
+        sourceBundleID: sourceApp?.bundleIdentifier,
+        changeCount: currentChangeCount
+    ))
+}</pre></div><div class="code-card"><header><b>Clipy/PasteSimulator.swift</b><span>auto-paste</span></header><pre><span class="k">final class</span> <span class="t">CGEventPasteSimulator</span>: <span class="t">PasteSimulating</span> {
+    <span class="k">private</span> <span class="k">let</span> virtualKeyV: <span class="t">CGKeyCode</span> = 0x09
+
+    <span class="k">func</span> simulatePaste() {
+        <span class="k">let</span> source = <span class="t">CGEventSource</span>(stateID: .hidSystemState)
+        <span class="k">let</span> down = <span class="t">CGEvent</span>(keyboardEventSource: source, virtualKey: virtualKeyV, keyDown: <span class="k">true</span>)
+        down?.flags = .maskCommand
+        <span class="k">let</span> up = <span class="t">CGEvent</span>(keyboardEventSource: source, virtualKey: virtualKeyV, keyDown: <span class="k">false</span>)
+        up?.flags = .maskCommand
+        down?.post(tap: .cgSessionEventTap)
+        up?.post(tap: .cgSessionEventTap)
+    }
+}</pre></div></div>
+      <ul style="margin-top:22px"><li>تمرّ الاختصارات العامة عبر <code>RegisterEventHotKey</code> من Carbon، فتعمل أيًّا كان التطبيق الظاهر في المقدمة. يمكن إعادة تسجيل <strong dir="ltr">⌘⇧V</strong> واختصار «الصق التالي» من الإعدادات، ويُسجَّل الاختصار الجديد قبل تحرير القديم، فلا تبقى بلا اختصار إذا كانت التركيبة محجوزة.</li><li>مراقب <code>NSEvent</code> عام يفتح اللوحة عندما تمرّر للأعلى على بعد 60 نقطة من أسفل الشاشة.</li><li>اللوحة نافذة بلا إطار و<strong>لا تسحب التركيز</strong>، فلا يفقد التطبيق الذي ستلصق فيه تركيزه عند فتحها. ونافذة المعاينة السريعة فوقها لا تأخذ التركيز كذلك، فتظل الأسهم والمسافة وEsc تعمل داخل اللوحة.</li><li>حين يكتب Clipy في الحافظة بنفسه يتذكّر رقم التغيير، فيصعد العنصر القديم الذي تلصقه إلى الأعلى بدلًا من تسجيله مرتين.</li><li>كتابة ⌘V داخل تطبيق آخر تحتاج إلى إذن <strong>تسهيلات الاستخدام</strong> (Accessibility) في macOS. يتحقّق Clipy منه بـ <code>CGPreflightPostEventAccess</code>، ويطلبه بـ <code>CGRequestPostEventAccess</code>، ويفتح القسم الصحيح في إعدادات النظام مباشرة إذا رُفض.</li></ul></div></div>
+    <div class="case-body"><h2>البنية</h2><div><p>لا يعتمد مدير السجل إلا على بضعة بروتوكولات صغيرة. كل تكامل مع النظام يقف خلف واحد منها، فيمكن استبداله. وهذا بالضبط ما تستخدمه لقطات هذه الصفحة: الواجهات الحقيقية، تغذّيها بدائل في الذاكرة.</p><div style="margin-top:22px"><div class="layers"><div class="layer"><code>ClipboardHistoryManager</code><span>حالة ‎@Observable: السجل، ومنع التكرار، ولوحات التثبيت، والمقتطفات، وحدّ العناصر، والحذف حسب العمر</span></div><div class="layer-arrow" aria-hidden="true">↓ يتعامل مع البروتوكولات فقط</div><div class="layer"><code>ClipboardStorageProtocol</code><span>DiskClipboardStorage: سجل JSON يُكتب في طابور خلفي ويُحفظ عند الإغلاق، والصور في Caches</span></div><div class="layer"><code>ClipboardMonitoringProtocol</code><span>ClipboardMonitor: يراقب الحافظة، ويتجاوز البيانات المخفية والتطبيقات المستثناة، ويحتفظ بالتنسيق</span></div><div class="layer"><code>HotkeyManaging</code><span>CarbonHotkeyManager: اختصارا الإظهار والإخفاء و«الصق التالي» الخاصان بالمستخدم</span></div><div class="layer"><code>PasteSimulating</code><span>CGEventPasteSimulator: يكتب ⌘V في التطبيق الذي جئت منه</span></div></div></div></div></div>
+    <div class="case-body"><h2>من النسخ إلى اللصق</h2><div><div style="margin-top:4px"><ol class="flow"><li><b>النسخ</b><span>تنسخ نصًا أو صورة أو ملفًا في أي تطبيق.</span></li><li><b>الاكتشاف</b><span>يلاحظ Clipy تغيّر الحافظة، إذ يفحص رقم التغيير مرتين في الثانية.</span></li><li><b>التصفية</b><span>يتجاوز العناصر التي تعلّمها برامج كلمات المرور بأنها مخفية، وكل ما يُنسخ في تطبيق مستثنى.</span></li><li><b>الحفظ</b><span>تُحسب بصمة الصور وتُرمَّز ويُقرأ النص فيها بعيدًا عن الخيط الرئيسي، والنسخ المكرر يصعد إلى الأعلى بدلًا من أن يتكرر.</span></li><li><b>الفتح</b><span><bdi dir="ltr">⌘⇧V</bdi>، أو سحبة بإصبعين عند الحافة السفلية، أو الزر العائم، أو شريط القوائم.</span></li><li><b>اللصق</b><span>اختر بطاقة أو اضغط من 1 إلى 9، بالتنسيق أو دونه: يعيد Clipy تنشيط تطبيقك السابق ويكتب ⌘V.</span></li></ol></div></div></div>
+    <div class="case-body"><h2>الإعدادات</h2><div class="split"><div><p>صارت الإعدادات تتبع أسلوب إعدادات نظام macOS: شريط جانبي بالأقسام ونماذج مجمّعة تتبع الوضع الفاتح أو الداكن ولون التمييز في النظام. يضم قسم <strong>عام</strong> التشغيل عند تسجيل الدخول وإذن اللصق وحدود السجل، ويسجّل قسم <strong>الاختصارات</strong> اختصارات عامة جديدة ويعرض مفاتيح اللوحة، ويعرض قسم <strong>الخصوصية</strong> التطبيقات المستثناة، ويدير قسما <strong>المقتطفات</strong> و<strong>لوحات التثبيت</strong> مجموعاتك، ويعرض قسم <strong>التخزين</strong> ذاكرة الصور المؤقتة ويمسح السجل بعد أن يسألك أولًا.</p><p>ومنذ الإصدار 1.1.1 تظهر نافذة الإعدادات أمام التطبيق الذي تعمل فيه عند فتحها من اللوحة، بدلًا من أن تختفي خلفه.</p></div><figure class="shot-frame"><img src="../../assets/clipy/settings.webp?v=1.1" alt="إعدادات Clipy، قسم الاختصارات: أداتا تسجيل لاختصاري الإظهار والإخفاء و«الصق التالي»، وقائمة بمفاتيح لوحة الحافظة" width="575" height="500" loading="lazy"></figure></div></div>
+    <div class="case-body" id="download"><h2>جرّبه</h2><div><p style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px"><a class="btn primary" href="https://github.com/AymanOmara/clipy/releases/latest/download/Clipy.zip">تنزيل للـ Mac ↓</a><a class="btn ghost" href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener">الشيفرة المصدرية ↖</a></p><p>Clipy 1.1.1 تطبيق شامل يعمل على أجهزة Mac بمعالجات Apple وIntel، <strong>ويتطلب macOS 26.4 أو أحدث</strong>. لم تُوثّقه Apple بعد، لذا في أول مرة تفتحه اذهب إلى <strong>إعدادات النظام ← الخصوصية والأمان</strong> واضغط <strong>فتح على أي حال</strong>. اسمح له في قسم تسهيلات الاستخدام ليعمل اللصق التلقائي، وإذا كنت تحدّث من إصدار سابق فأوقف Clipy هناك ثم شغّله من جديد. سجلك محفوظ. الخطوات كاملة (بالإنجليزية) في <a href="https://github.com/AymanOmara/clipy/releases/latest" target="_blank" rel="noopener">صفحة الإصدار ↖</a>.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">→</span> العودة إلى كل الأعمال</a>
+    <a href="../../work/nca.html">التالي: NCA (بالإنجليزية) <span aria-hidden="true">←</span></a>
+  </div>
+</footer>
+<script src="../../script.js" defer></script>
+</body>
+</html>
