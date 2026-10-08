@@ -163,12 +163,20 @@
         <div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">get_it</span><span class="tag">Kotlin</span><span class="tag">الإشعارات</span><span class="tag">RTL</span></div>
         <a class="case-link" href="../work/wirdi.html">اقرأ دراسة الحالة (بالإنجليزية) <span aria-hidden="true">←</span></a>
       </article>
+      <article class="proj reveal with-art" data-cat="flutter native" id="project-adaptive-liquid-glass">
+        <div class="project-art art-mini art-glass" style="--tilt:-5deg"><span class="project-art-label" aria-hidden="true">زجاج iOS 26 السائل في Flutter. واجهة واحدة.</span><span class="mock-note">لقطة حقيقية، iPhone 17 Pro، iOS 26.4.</span><div class="phone phone-art phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/controls-dark.webp" alt="حقل بحث زجاجي وأزرار تبديل ومنزلق وأزرار في الوضع الداكن" width="600" height="1304" loading="lazy" decoding="async"></div></div></div>
+        <div class="proj-top"><div class="proj-ico">09 /</div><div class="proj-links"><a href="https://pub.dev/packages/adaptive_liquid_glass" target="_blank" rel="noopener">pub.dev ↖</a><a href="https://github.com/AymanOmara/adaptive_liquid_glass" target="_blank" rel="noopener">GitHub ↖</a></div></div>
+        <h3>adaptive_liquid_glass</h3><div class="kind">حزمة Flutter مفتوحة المصدر · iOS وأندرويد</div>
+        <dl class="project-story"><div><dt>التحدي</dt><dd>لم يكن لتطبيقات Flutter طريقة لمجاراة الزجاج السائل في iOS 26 دون تفريع الكود حسب المنصة، ولا طريقة لإثبات أن النتيجة تشبه SwiftUI فعلًا.</dd></div><div><dt>مساهمتي</dt><dd>صممت الحزمة وبنيتها وحدي: زجاج SwiftUI الأصلي على iOS 26، وبديل بمظلّل (shader) لإصدارات iOS الأقدم، وMaterial 3 على أندرويد، خلف واجهة واحدة تضم أكثر من 40 مكوّنًا زجاجيًا، مع خط قياس يقيّم كل مشهد مقابل SwiftUI.</dd></div><div><dt>النتيجة</dt><dd>75 من 75 مشهدًا مطابقة لـ SwiftUI على المسار الأصلي، وكل مشاهد المظلّل عند SSIM ≥ 0.95، مع دعم RTL كامل وأكثر من 700 اختبار. منشورة على pub.dev.</dd></div></dl>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Swift</span><span class="tag">مظلّلات GLSL</span><span class="tag">Material 3</span><span class="tag">RTL</span><span class="tag">مفتوح المصدر</span></div>
+        <a class="case-link" href="../work/adaptive-liquid-glass.html">اقرأ دراسة الحالة (بالإنجليزية) <span aria-hidden="true">←</span></a>
+      </article>
       <article class="proj reveal with-art" data-cat="flutter" id="project-nextlearning">
         <div class="project-art art-mini art-rose" aria-hidden="true"><span class="project-art-label">بناء منفرد من Figma إلى الإطلاق.</span><span class="mock-note">نموذج توضيحي.</span><div class="phone phone-art" dir="rtl" lang="ar"><div class="phone-screen">
           <div class="ph-status"><span>9:41</span><span>●●●</span></div>
           <div class="ph-greet">استكشف</div><div class="ph-field">ابحث عن دورة<b>⌕</b></div><div class="ph-chips"><span class="on">الكل</span><span>برمجة</span><span>تصميم</span></div><div class="ph-row"><i></i>أساسيات Flutter<em>4.8</em></div><div class="ph-row"><i></i>تصميم الواجهات<em>4.6</em></div><div class="ph-row"><i></i>إدارة المشاريع<em>4.7</em></div>
         </div></div></div>
-        <div class="proj-top"><div class="proj-ico">09 /</div></div>
+        <div class="proj-top"><div class="proj-ico">10 /</div></div>
         <h3>Next Learning</h3><div class="kind">مشروع لعميل · منصة تعليمية · Flutter</div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>تطبيق جوال لمنصة دورات: تصفح التصنيفات ومزودي التدريب، والبحث في الدورات وتصفيتها، وتفاصيل الدورة، وطلبات المتعلمين، بناءً على تصميم Figma وواجهة API قائمة.</dd></div><div><dt>مساهمتي</dt><dd>بنيت التطبيق وحدي (جميع الـ 85 commit) على حزم منفصلة common وdomain وdata وdi، مع Cubit لكل شاشة، وget_it، وRetrofit، وناقل أحداث يربط لوحة التصفية بالبحث.</dd></div><div><dt>النتيجة</dt><dd>التصفح كزائر وتسجيل الدخول، والتسجيل على خطوتين مع اختيار الاهتمامات، والرئيسية، والاستكشاف مع بحث بعشرة مرشحات، وتفاصيل الدورة في ستة تبويبات، والطلبات، وتعديل الملف الشخصي وتغيير كلمة المرور، بالعربية والإنجليزية.</dd></div></dl>
         <div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">get_it</span><span class="tag">Retrofit</span><span class="tag">RTL</span></div>
@@ -179,7 +187,7 @@
           <div class="ph-status"><span>9:41</span><span>●●●</span></div>
           <div class="ph-greet">Your cart</div><div class="ph-title">3 items</div><div class="ph-row"><i></i>Coffee beans<em>320</em></div><div class="ph-row"><i></i>Filter papers<em>45</em></div><div class="ph-field">Remind me<b>Every 30 days</b></div><div class="ph-cta">Checkout</div>
         </div></div></div>
-        <div class="proj-top"><div class="proj-ico">10 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener">التطبيق ↖</a><a href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener">API ↖</a></div></div>
+        <div class="proj-top"><div class="proj-ico">11 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/rahtk-mobile" target="_blank" rel="noopener">التطبيق ↖</a><a href="https://github.com/AymanOmara/rahtk" target="_blank" rel="noopener">API ↖</a></div></div>
         <h3>راحتك (Rahtk)</h3><div class="kind">تجارة إلكترونية متكاملة</div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>منتج تجارة إلكترونية يشمل التسوق عبر الجوال والدفع وتذكيرات الشراء.</dd></div><div><dt>مساهمتي</dt><dd>بنيت تطبيق Flutter وواجهة API بـ <bdi>.NET 8</bdi> مع EF Core وHangfire وFirebase.</dd></div><div><dt>النتيجة</dt><dd>ربطت تصفح المنتجات والعناوين وخيارات الدفع والتذكيرات المجدولة والإشعارات الفورية.</dd></div></dl>
         <div class="tags"><span class="tag">Flutter</span><span class="tag">.NET 8</span><span class="tag">EF Core</span><span class="tag">Firebase</span></div>
@@ -190,7 +198,7 @@
           <div class="ph-status"><span>9:41</span><span>●●●</span></div>
           <div class="ph-greet">Good evening</div><div class="ph-field">Search products<b>⌕</b></div><div class="ph-grid"><div class="ph-tile"><i></i><span>Vitamins</span></div><div class="ph-tile"><i></i><span>Skin care</span></div><div class="ph-tile"><i></i><span>Baby care</span></div><div class="ph-tile"><i></i><span>Offers</span></div></div><div class="ph-row"><i></i>My orders<em>2</em></div>
         </div></div></div>
-        <div class="proj-top"><div class="proj-ico">11 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/ibn_sina_flutter" target="_blank" rel="noopener">التطبيق ↖</a><a href="https://github.com/AymanOmara/sina_dashboard" target="_blank" rel="noopener">لوحة التحكم ↖</a></div></div>
+        <div class="proj-top"><div class="proj-ico">12 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/ibn_sina_flutter" target="_blank" rel="noopener">التطبيق ↖</a><a href="https://github.com/AymanOmara/sina_dashboard" target="_blank" rel="noopener">لوحة التحكم ↖</a></div></div>
         <h3>ابن سينا</h3><div class="kind">إعادة بناء نظام قديم · جوال + لوحة تحكم ويب + API</div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>تطبيق قديم مبني بـ Xamarin (C#) ظل المتجر يرفضه حتى بعد أن أصلحت أخطاءه.</dd></div><div><dt>مساهمتي</dt><dd>أعدت بناء التطبيق من الصفر بـ Flutter، وبنيت لوحة تحكم ويب بـ Flutter للعميل، وساهمت في الواجهة الخلفية بـ ASP.NET Core.</dd></div><div><dt>النتيجة</dt><dd>حلّ تطبيق Flutter قابل للصيانة محل التطبيق المرفوض، مع لوحة التحكم والـ API.</dd></div></dl>
         <div class="tags"><span class="tag"><bdi>Xamarin → Flutter</bdi></span><span class="tag">Flutter Web</span><span class="tag">ASP.NET Core</span></div>
@@ -198,7 +206,7 @@
       </article>
       <article class="proj reveal with-art" data-cat="native" id="project-clipy">
         <div class="project-art art-mini art-violet" aria-hidden="true"><span class="project-art-label">يعمل دون اتصال عن قصد.</span><span class="mock-note">لقطة حقيقية من التطبيق ببيانات تجريبية.</span><div class="mac mac-shot"><img src="../assets/clipy/panel-card.webp?v=1.1" alt="" width="700" height="280" loading="lazy"></div></div>
-        <div class="proj-top"><div class="proj-ico">12 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/clipy/releases/latest" target="_blank" rel="noopener">تنزيل ↖</a><a href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener">الشيفرة ↖</a></div></div>
+        <div class="proj-top"><div class="proj-ico">13 /</div><div class="proj-links"><a href="https://github.com/AymanOmara/clipy/releases/latest" target="_blank" rel="noopener">تنزيل ↖</a><a href="https://github.com/AymanOmara/clipy" target="_blank" rel="noopener">الشيفرة ↖</a></div></div>
         <h3>Clipy</h3><div class="kind">macOS · Swift / SwiftUI</div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>وصول أسرع إلى سجل الحافظة دون إرسال المحتوى المنسوخ إلى أي خادم.</dd></div><div><dt>مساهمتي</dt><dd>بنيت أداة macOS أصلية بـ Swift وSwiftUI وAppKit.</dd></div><div><dt>النتيجة</dt><dd>سجل يعمل دون اتصال مع البحث داخل الصور، ولوحات تثبيت، ومقتطفات نصية، وقائمة لصق متتابع، واختصارات قابلة للتخصيص، ولصق سريع.</dd></div></dl>
         <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">AppKit</span></div>
@@ -210,7 +218,7 @@
           <div class="ph-status"><span>9:41</span><span>●●●</span></div>
           <div class="ph-greet">حجز جديد</div><div class="ph-title">شاليه الخيران</div><div class="ph-field">الوصول<b>الخميس ١٢</b></div><div class="ph-field">المغادرة<b>السبت ١٤</b></div><div class="ph-cta">تأكيد الحجز</div><div class="ph-row"><i></i>مسح رمز QR</div>
         </div></div></div>
-        <div class="proj-top"><div class="proj-ico">13 /</div></div>
+        <div class="proj-top"><div class="proj-ico">14 /</div></div>
         <h3>حجوزات</h3><div class="kind">حجوزات · الكويت · تطبيقا عملاء وإدارة</div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>احتاج أصحاب الشاليهات وعملاؤهم إلى حجز الحجوزات ودفعها وتأكيد الوصول عبر تطبيقين على واجهة خلفية مشتركة.</dd></div><div><dt>مساهمتي</dt><dd>تسلّمت تطبيقي Flutter من شيفرة وكالة سابقة وأنجزت معظم التعديلات اللاحقة (80 من 81 و37 من 38): أعدت بناء مساري الحجز والدفع، وتقويم توفر مخصصًا، والإشعارات الفورية، وتأكيد الوصول عبر QR لأصحاب الشاليهات.</dd></div><div><dt>النتيجة</dt><dd>أطلقت إصدارات ديسمبر 2023 الإنتاجية، وحوّلت تطبيق العملاء إلى ثلاثة تطبيقات بعلامات مختلفة، ثم أضفت الحجوزات المجانية ونماذج بيانات العملاء التي يحددها الخادم.</dd></div></dl>
         <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">FCM</span><span class="tag">عربي / إنجليزي</span></div>
@@ -219,7 +227,7 @@
 
       <article class="proj reveal with-art" data-cat="fullstack" id="project-perfectorder">
         <div class="project-art art-mini art-lime" style="--tilt:3deg" aria-hidden="true"><span class="project-art-label">طلبات متزامنة لحظيًا.</span><span class="mock-note">نموذج توضيحي.</span><div class="mac"><div class="mac-bar"><i></i><i></i><i></i><span>Orders · live</span></div><div class="mac-body"><div class="mac-row"><b>#1042</b>Table 4<span class="st live">Preparing</span></div><div class="mac-row on"><b>#1043</b>Pickup<span class="st live">Collected</span></div><div class="mac-row"><b>#1039</b>Table 9<span class="st">Closed</span></div><div class="mac-row"><b>#1044</b>Delivery<span class="st">New</span></div><div class="mac-row">SignalR connected<em>● live</em></div></div></div></div>
-        <div class="proj-top"><div class="proj-ico">14 /</div></div>
+        <div class="proj-top"><div class="proj-ico">15 /</div></div>
         <h3>PerfectOrder</h3><div class="kind">إدارة الطلبات · نموذج مبدئي بـ <bdi>.NET</bdi></div>
         <dl class="project-story"><div><dt>التحدي</dt><dd>استكشاف إدارة تعاونية للطلبات مع تحديثات لحظية ودورة حياة منظمة للطلب.</dd></div><div><dt>مساهمتي</dt><dd>بنيت واجهة API بـ ASP.NET Core مع EF Core وSQL Server وSignalR وMediatR، بمعمارية قائمة على الميزات ونمط المستودع.</dd></div><div><dt>النتيجة</dt><dd>نموذج مبدئي بتحديثات طلبات متزامنة، ومعالجة للصور، ومسار عمل من الاستلام حتى الإغلاق.</dd></div></dl>
         <div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">SignalR</span><span class="tag">MediatR</span></div>

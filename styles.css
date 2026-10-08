@@ -1101,6 +1101,7 @@ html[lang="ar"] h2, html[lang="ar"] .introduction h2, html[lang="ar"] .contact-b
 /* ---- Real app screenshots inside the phone frame ---- */
 .phone-shot .phone-screen { padding: 0; gap: 0; background: #0d1512; }
 .phone-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.art-glass { --glow: #2a6bd6; --base: #0a0f1e; --a1: #9fd6ff; --a2: #5b8cff; --screen: #0b1020; }
 .art-emerald { --glow: #0f7a47; --base: #06160f; --a1: #7fe0a8; --a2: #d9b45a; --screen: #0d1512; }
 
 /* ---- Rahtk API showcase: Swagger-style windows, code, data model, flow ---- */

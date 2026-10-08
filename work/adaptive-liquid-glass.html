@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adaptive_liquid_glass — Ayman Omara</title>
+<meta name="description" content="adaptive_liquid_glass, an open-source Flutter package: iOS 26 Liquid Glass measured against SwiftUI, a shader fallback for older iOS and Material 3 on Android, behind one API.">
+<meta property="og:title" content="adaptive_liquid_glass — case study by Ayman Omara">
+<meta property="og:description" content="iOS 26 Liquid Glass for Flutter, measured against SwiftUI, with a shader fallback for older iOS and Material 3 on Android, behind one API.">
+<meta property="og:image" content="https://aymanomara.github.io/assets/social-preview.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aymanomara.github.io/work/adaptive-liquid-glass.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Ayman Omara home">Ayman Omara</a>
+    <div class="nav-actions">
+      <div class="links" id="links">
+        <a href="../#projects">Work</a>
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </div>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open navigation" aria-controls="links" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<header class="case-hero">
+  <div class="wrap">
+    <a class="case-back" href="../#project-adaptive-liquid-glass"><span aria-hidden="true">←</span> All work</a>
+    <div class="eyebrow">CASE STUDY · OPEN-SOURCE PACKAGE · FLUTTER</div>
+    <h1>iOS 26 Liquid Glass for Flutter, measured against SwiftUI.</h1>
+    <p class="lead">adaptive_liquid_glass gives a Flutter app Apple’s Liquid Glass on iOS 26, a shader that matches it on older iOS, and a Material 3 surface on Android, all behind one API. App code never branches on platform. I designed and built it on my own, from the Swift plugin and the fragment shaders to the pipeline that proves the result against SwiftUI pixel by pixel.</p>
+    <div class="case-facts"><div><b>40+</b><span>Glass components</span></div><div><b>75 / 75</b><span>Scenes at parity with SwiftUI</span></div><div><b>≥ 0.95</b><span>SSIM on every shader scene</span></div><div><b>700+</b><span>Automated tests</span></div></div>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="case-screens-wrap" style="margin:0;--glow:#2a6bd6">
+      <div class="case-screens"><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/controls-dark.webp" alt="Glass search field, segmented control, toggles, slider and buttons" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/alert-toolbar-dark.webp" alt="A glass alert over the page, with a glass toolbar replacing the tab bar" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/sheet-dark.webp" alt="A glass sheet at the medium detent" width="600" height="1304" loading="lazy" decoding="async"></div></div></div>
+      <figcaption>The example app on iPhone 17 Pro, iOS 26.4, native Liquid Glass, dark mode.</figcaption>
+    </figure>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="case-body"><h2>The problem</h2><div><p>iOS 26 made Liquid Glass the look of the platform, and Flutter had nothing for it. Teams either wrote a blur that looked roughly right, or branched the app into a Cupertino tree and a Material tree. Neither path had a way to answer the question that matters: <strong>does it actually look like SwiftUI?</strong></p><p>I wanted one widget tree, the real thing on the platform that has it, a faithful fallback where it doesn’t, and numbers instead of opinions.</p></div></div>
+    <div class="case-body"><h2>What I built</h2><div><ul><li><strong>Three renderers, one API.</strong> On iOS 26 the glass is SwiftUI’s own <code>glassEffect</code>, hosted through a Swift plugin, so it is pixel-identical to a SwiftUI app. On older iOS a fragment shader reproduces it. On Android the same widgets draw a Material 3 surface with colours from your theme and an ink ripple on press. No glass code runs there.</li><li><strong>A SwiftUI-shaped API.</strong> <code>Text('Hello').glassEffect()</code> mirrors SwiftUI’s modifier. <code>Glass.regular</code>, <code>clear</code>, <code>tinted</code> and <code>interactive</code> chain the way they do in Swift. <code>GlassGroup</code> is <code>GlassEffectContainer</code>: members share one backdrop sample and morph into each other.</li><li><strong>40+ components.</strong> Buttons, segmented controls, toggles, sliders, steppers, text fields, search, chips, badges, lists and swipe rows, disclosures, menus, context menus, popovers, action sheets, dialogs, sheets with detents, full-screen covers, toolbars, tab bars with the iOS 26 lens, navigation and scroll-edge effects, page controls, progress, gauges, wheel and date pickers, a colour picker, toasts, pull-to-refresh and an empty state.</li><li><strong>Measured motion.</strong> Press, release and morph use springs fitted from SwiftUI recordings, and the full-screen cover’s slide is fitted from a screen recording to within 0.6% of the screen height.</li><li><strong>Readable by default.</strong> Text and icons on glass get a vibrant, legible colour like SwiftUI’s labels; colours you set yourself still win. Interactive glass gets button semantics, focus, and Enter and Space.</li><li><strong>RTL-safe.</strong> Directional insets throughout, while the light angle is not mirrored, which is what iOS does.</li></ul></div></div>
+    <figure class="case-screens-wrap" style="margin:80px 0;--glow:#2a6bd6">
+      <div class="case-screens"><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/pickers-fields-dark.webp" alt="Stepper, wheel picker, date picker and text fields on glass" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/lists-chips-progress-dark.webp" alt="A list section, a disclosure, chips, a page control and progress indicators" width="600" height="1304" loading="lazy" decoding="async"></div></div><div class="phone phone-shot"><div class="phone-screen"><img src="../assets/adaptive-liquid-glass/gauges-badges-empty-dark.webp" alt="Gauges, badges, an empty state and swipe-action rows" width="600" height="1304" loading="lazy" decoding="async"></div></div></div>
+      <figcaption>Pickers and fields, lists and progress, gauges and badges.</figcaption>
+    </figure>
+    <div class="case-body"><h2>Proving fidelity</h2><div><p>The shader is only useful if it matches. I built a fidelity pipeline that renders <strong>75 scenes</strong> twice, once in a SwiftUI reference app and once in Flutter, on the same simulator (iPhone 17 Pro, iOS 26.4), then scores each pair with SSIM and CIEDE2000 colour difference. The scenes cover regular, clear and tinted glass; capsules, circles and rounded rectangles; photo, text and gradient backgrounds; light and dark mode; and merged groups.</p><p>The native path scores <strong>75 of 75 at parity</strong> (minimum SSIM 0.9996, maximum ΔE 0.05). The shader scores a median SSIM of 0.983 and a median ΔE of 1.29, with <strong>no scene below SSIM 0.95</strong> and 55 of 75 passing the strict bars (SSIM ≥ 0.97, ΔE ≤ 2.0). Every constant in the shader was tuned against these numbers, not by eye, and the per-scene record is checked into the repository so a regression shows up as a changed number.</p></div></div>
+    <div class="case-body"><h2>Engineering notes</h2><div><ul><li><strong>Swift plugin.</strong> The iOS 26 path hosts real SwiftUI glass views inside the Flutter view hierarchy and keeps their shapes, tints and interactive state in sync with the Dart widgets, including groups that morph.</li><li><strong>Fragment shaders.</strong> Three GLSL shaders: the glass itself, a progressive blur for scroll edges, and the tab-bar lens. They load before the first frame through an optional <code>initialize()</code> and fall back to a plain blur for a frame or two if you skip it.</li><li><strong>Measured, not guessed.</strong> Component positions, insets and colours were taken from SwiftUI with a ruler and a pixel picker, and the changelog records each correction with the measured error.</li><li><strong>Tests.</strong> 700+ widget and unit tests, plus an example app with a scripted tour used for the pub.dev gallery and the demo video.</li></ul></div></div>
+    <div class="case-body"><h2>Outcome</h2><div><p>A Flutter app can adopt Liquid Glass in one line and look right on every iPhone and every Android phone, with proof. The package is <strong>published on pub.dev</strong> with a dev-channel release train, documented end to end, and open source under MIT.</p></div></div>
+    <div class="case-body" id="try"><h2>Try it</h2><div><p style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px"><a class="btn primary" href="https://pub.dev/packages/adaptive_liquid_glass" target="_blank" rel="noopener">View on pub.dev ↗</a><a class="btn ghost" href="https://github.com/AymanOmara/adaptive_liquid_glass" target="_blank" rel="noopener">Source on GitHub ↗</a></p><p>Add <code>adaptive_liquid_glass</code> to your <code>pubspec.yaml</code> and wrap any widget with <code>.glassEffect()</code>. No theme, no initialisation call, no platform checks. The <a href="https://www.linkedin.com/feed/update/urn:li:activity:7513729658090151936/" target="_blank" rel="noopener">demo video on LinkedIn ↗</a> walks through the components on a real device.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap case-next">
+    <a href="../#projects"><span aria-hidden="true">←</span> Back to all work</a>
+    <a href="next-learning.html">Next: Next Learning <span aria-hidden="true">→</span></a>
+  </div>
+</footer>
+<script src="../script.js" defer></script>
+</body>
+</html>
